@@ -11,9 +11,14 @@ public class TimerScript : MonoBehaviour {
 
     public bool inProgress = false;
 
+    public Sprite[] sprites = new Sprite[8];
+
+    public GameObject sprite;
+
 	// Use this for initialization
 	void Start () {
-        startTime(10);
+        startTimer(10);
+        sprite.GetComponent<SpriteRenderer>().sprite = sprites[0];
 	}
 	
 	// Update is called once per frame
@@ -24,7 +29,7 @@ public class TimerScript : MonoBehaviour {
         }
 	}
 
-    bool startTime(float length)
+    bool startTimer(float length)
     {
         if (inProgress)
         {
@@ -62,6 +67,7 @@ public class TimerScript : MonoBehaviour {
 
     void updateSprite()
     {
+        sprite.GetComponent<SpriteRenderer>().sprite = sprites[currentSpriteNum];
         Debug.Log("updating sprite: " + currentSpriteNum);
     }
 }
