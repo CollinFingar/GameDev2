@@ -297,6 +297,48 @@ Prefab:
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 1832652077}
+    - target: {fileID: 21243676, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b2145738647dad14fa47a9d02cecd1b3,
+        type: 3}
+    - target: {fileID: 472980, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 472980, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.4651399
+      objectReference: {fileID: 0}
+    - target: {fileID: 472980, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 472980, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21265212, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b2145738647dad14fa47a9d02cecd1b3,
+        type: 3}
+    - target: {fileID: 415042, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 415042, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.4694974
+      objectReference: {fileID: 0}
+    - target: {fileID: 415042, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 415042, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.443
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6cfda5774ee5304591ea1adf0462890, type: 2}
   m_IsPrefabParent: 0
