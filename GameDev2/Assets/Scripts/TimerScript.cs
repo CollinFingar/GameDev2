@@ -17,7 +17,7 @@ public class TimerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        startTimer(timerLength);
+		startTimer(timerLength);
         sprite.GetComponent<SpriteRenderer>().sprite = sprites[0];
 	}
 
@@ -46,6 +46,9 @@ public class TimerScript : MonoBehaviour {
         timerStart = Time.time;
         timerEnd = timerStart + timerLength;
         updateSpriteTime = Time.time + timerLength / 9;
+		//create new contracts
+		GameObject.Find ("Faction1").GetComponent<FactionScript> ().createContracts ();
+		GameObject.Find ("Faction2").GetComponent<FactionScript> ().createContracts ();
         return true;
     }
 
@@ -54,8 +57,8 @@ public class TimerScript : MonoBehaviour {
         float time = Time.time;
         if(time >= timerEnd)
         {
-            //currentSpriteNum++;
-            updateSprite();
+			GameObject.Find ("Faction1").GetComponent<FactionScript> ().destroyContracts ();
+			GameObject.Find ("Faction2").GetComponent<FactionScript> ().destroyContracts ();
             inProgress = false;
         }
         else
