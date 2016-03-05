@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662d7f96d967ffb4e8a5009c9111cd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerLength: 5
+  timerLength: 10
   timerStart: 0
   timerEnd: 0
   updateSpriteTime: 0
