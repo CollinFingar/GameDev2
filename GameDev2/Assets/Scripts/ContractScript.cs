@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ContractScript : MonoBehaviour {
     public int Faction = 0;
@@ -9,10 +10,12 @@ public class ContractScript : MonoBehaviour {
     public float DecayRate = 0;
 	public float moveTime = 0;
 	public int moveType = 0; //type of movement (0 = creation, 1 = expire)
+	Text desc;
 
 	// Use this for initialization
 	void Start () {
-	
+		desc = this.gameObject.GetComponentInChildren<Text> ();
+		desc.text = "I am on Faction " + Faction.ToString ();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +24,7 @@ public class ContractScript : MonoBehaviour {
 		{
 			moveContract ();
 		}
+		drawContract ();
 	}
 
 	void moveContract()
@@ -48,6 +52,10 @@ public class ContractScript : MonoBehaviour {
 			}
 
 		}
+	}
+
+	void drawContract() {
+		
 	}
 
     void OnMouseEnter()
