@@ -14,6 +14,8 @@ public class CameraScript : MonoBehaviour {
     public float journeyLength = 1f;
 
     private float startTime = 0f;
+    private float currentMovingTime = 0f;
+    public float moveTime = 0.5f;
 
     public Camera mainCameraScript;
     public GameObject mainInterface;
@@ -48,14 +50,15 @@ public class CameraScript : MonoBehaviour {
                                        -10);
         mainInterface.SetActive(false);
         startTime = Time.time;
+        currentMovingTime = startTime;
         journeyLength = Vector3.Distance(zoomedOutPosition, zoomedInPostion);
         movingIn = true;
     }
     void updateMoveIn(){
         float distCovered = (Time.time - startTime) * speed;
-        float fracJourney = distCovered / journeyLength;
-        mainCameraScript.orthographicSize = zoomedInScale * fracJourney + zoomedOutScale * (1 - fracJourney);
-        transform.position = Vector3.Lerp(zoomedOutPosition, zoomedInPostion, fracJourney);
+        currentMovingTime = Time.time - startTime;
+        mainCameraScript.orthographicSize = zoomedInScale * currentMovingTime / moveTime + zoomedOutScale * (1 - currentMovingTime / moveTime);
+        transform.position = Vector3.Lerp(zoomedOutPosition, zoomedInPostion, currentMovingTime/moveTime);
         if(transform.position == zoomedInPostion)
         {
             movingIn = false;
@@ -64,18 +67,19 @@ public class CameraScript : MonoBehaviour {
     }
 
     public void moveOut(){
-        mainCameraScript.orthographicSize = zoomedOutScale;
+        //mainCameraScript.orthographicSize = zoomedOutScale;
         mainInterface.SetActive(true);
         journeyLength = Vector3.Distance(zoomedOutPosition, zoomedInPostion);
         startTime = Time.time;
+        currentMovingTime = startTime;
         movingOut = true;
         canvas.gameObject.SetActive(false);
     }
     void updateMoveOut(){
         float distCovered = (Time.time - startTime) * speed;
-        float fracJourney = distCovered / journeyLength;
-        mainCameraScript.orthographicSize = zoomedOutScale * fracJourney + zoomedInScale * (1 - fracJourney);
-        transform.position = Vector3.Lerp(zoomedInPostion, zoomedOutPosition, fracJourney);
+        currentMovingTime = Time.time - startTime;
+        mainCameraScript.orthographicSize = zoomedOutScale * currentMovingTime / moveTime + zoomedInScale * (1 - currentMovingTime / moveTime);
+        transform.position = Vector3.Lerp(zoomedInPostion, zoomedOutPosition, currentMovingTime / moveTime);
         if (transform.position == zoomedOutPosition)
         {
             movingOut = false;
