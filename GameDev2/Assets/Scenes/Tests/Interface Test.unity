@@ -1037,7 +1037,7 @@ MonoBehaviour:
   spacePowerValue: 0
   infantryResources: 0000000000000000000000000000000000000000
   spaceResources: 0000000000000000000000000000000000000000
-  contract: {fileID: 177958, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
+  contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
 --- !u!4 &278379907
 Transform:
   m_ObjectHideFlags: 0
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   spacePowerValue: 0
   infantryResources: 0000000000000000000000000000000000000000
   spaceResources: 0000000000000000000000000000000000000000
-  contract: {fileID: 177958, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
+  contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
 --- !u!4 &466273939
 Transform:
   m_ObjectHideFlags: 0
@@ -3054,7 +3054,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1143114789}
+  - {fileID: 1395794688}
   - {fileID: 844646438}
   - {fileID: 1237225271}
   - {fileID: 156315370}
@@ -3062,10 +3062,6 @@ Transform:
   - {fileID: 1749183480}
   m_Father: {fileID: 1724594111}
   m_RootOrder: 5
---- !u!4 &1143114789 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 420448, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
-  m_PrefabInternal: {fileID: 1282672886}
 --- !u!1 &1145313524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4057,6 +4053,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!224 &1395794688 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22435296, guid: f1f8c6acf7a6f3b44bbc9152c895de9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1282672886}
 --- !u!1 &1419837651
 GameObject:
   m_ObjectHideFlags: 0
