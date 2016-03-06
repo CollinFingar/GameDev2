@@ -9,10 +9,13 @@ public class PlanetScript : MonoBehaviour {
     public string planetInfo = "I'm a placeholder for info\nenter\nenter\nmore stufff lololol";
 
     public Camera mainCamera;
-    public CameraScript cs;
+    private CameraScript cs;
 
     public Text planetNameTextObject;
     public Text planetInfoTextObject;
+
+    public Button b1;
+    public Button b2;
 
     public bool movedIn = false;
 
