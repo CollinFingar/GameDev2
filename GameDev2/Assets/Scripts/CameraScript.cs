@@ -23,6 +23,7 @@ public class CameraScript : MonoBehaviour {
     public GameObject testObject;
 
     public Canvas canvas;
+    public Canvas interfaceCanvas;
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +54,7 @@ public class CameraScript : MonoBehaviour {
         currentMovingTime = startTime;
         journeyLength = Vector3.Distance(zoomedOutPosition, zoomedInPostion);
         movingIn = true;
+        interfaceCanvas.gameObject.SetActive(false);
     }
     void updateMoveIn(){
         float distCovered = (Time.time - startTime) * speed;
@@ -61,6 +63,7 @@ public class CameraScript : MonoBehaviour {
         transform.position = Vector3.Lerp(zoomedOutPosition, zoomedInPostion, currentMovingTime/moveTime);
         if(transform.position == zoomedInPostion)
         {
+            mainCameraScript.orthographicSize = zoomedInScale;
             movingIn = false;
             canvas.gameObject.SetActive(true);
         }
@@ -82,7 +85,9 @@ public class CameraScript : MonoBehaviour {
         transform.position = Vector3.Lerp(zoomedInPostion, zoomedOutPosition, currentMovingTime / moveTime);
         if (transform.position == zoomedOutPosition)
         {
+            mainCameraScript.orthographicSize = zoomedOutScale;
             movingOut = false;
+            interfaceCanvas.gameObject.SetActive(true);
         }
     }
 }
