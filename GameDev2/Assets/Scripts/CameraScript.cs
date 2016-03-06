@@ -20,9 +20,11 @@ public class CameraScript : MonoBehaviour {
 
     public GameObject testObject;
 
+    public Canvas canvas;
+
 	// Use this for initialization
 	void Start () {
-	    
+        canvas.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -57,6 +59,7 @@ public class CameraScript : MonoBehaviour {
         if(transform.position == zoomedInPostion)
         {
             movingIn = false;
+            canvas.gameObject.SetActive(true);
         }
     }
 
@@ -66,6 +69,7 @@ public class CameraScript : MonoBehaviour {
         journeyLength = Vector3.Distance(zoomedOutPosition, zoomedInPostion);
         startTime = Time.time;
         movingOut = true;
+        canvas.gameObject.SetActive(false);
     }
     void updateMoveOut(){
         float distCovered = (Time.time - startTime) * speed;
