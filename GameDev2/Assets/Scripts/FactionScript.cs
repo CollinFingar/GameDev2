@@ -29,7 +29,7 @@ public class FactionScript : MonoBehaviour {
 	public void createContracts() {
 		for (int i = 0; i < 3; i++) 
 		{
-			GameObject tmp = (GameObject)Instantiate (contract, new Vector2 ((faction-1) * 14.9f + -7.45f, i * -2.5f + -6.5f),Quaternion.identity);
+			GameObject tmp = (GameObject)Instantiate (contract, new Vector3 ((faction-1) * 14.9f + -7.45f, i * -2.5f + -6.5f,-1),Quaternion.identity);
 			tmp.GetComponent<ContractScript> ().Faction = faction;
 			contracts[i] = tmp; //add Contract to array
 		}

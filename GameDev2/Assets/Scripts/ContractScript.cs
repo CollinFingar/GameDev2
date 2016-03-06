@@ -28,7 +28,7 @@ public class ContractScript : MonoBehaviour {
 		if (moveType == 0) //Move on Screen/Create
 		{
 			float newY = this.transform.position.y + (moveTime/50)*.34f;
-			this.transform.position = new Vector2(this.transform.position.x,newY);
+			this.transform.position = new Vector3(this.transform.position.x,newY,this.transform.position.z);
 			moveTime--;
 			if (moveTime == 0) 
 			{
@@ -38,7 +38,7 @@ public class ContractScript : MonoBehaviour {
 		else if (moveType == 1)
 		{
 			float newX = this.transform.position.x - (1 - 2*(Faction-1)) * (50/moveTime *.17f);
-			this.transform.position = new Vector2(newX,this.transform.position.y);
+			this.transform.position = new Vector3(newX,this.transform.position.y,this.transform.position.z);
 			moveTime--;
 
 			if (moveTime == 0) 
