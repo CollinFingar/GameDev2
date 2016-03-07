@@ -4,18 +4,38 @@ using UnityEngine.UI;
 
 public class ContractScript : MonoBehaviour {
     public int Faction = 0;
-    public float RewardAmount = 0;
-    public float CostAmount = 0;
-    public float CostType = 0;
+    public int RewardAmount = 0;
+    public int CostAmount = 0;
+    public int CostType = 0;
+	private string type;
+	public int PowerReward = 0;
     public float DecayRate = 0;
 	public float moveTime = 0;
 	public int moveType = 0; //type of movement (0 = creation, 1 = expire)
 	Text desc;
 
+	private int[] values = new int[4];
+
 	// Use this for initialization
 	void Start () {
+		if (CostType == 0) {
+			type = "Shield";
+		}
+
+		if (CostType == 1) {
+			type = "Guns";
+		}
+
+		if (CostType == 2) {
+			type = "Explosives";
+		}
+
+		if (CostType == 3) {
+			type = "Ships";
+		}
+
 		desc = this.gameObject.GetComponentInChildren<Text> ();
-		desc.text = "I am on Faction " + Faction.ToString ();
+		desc.text = type+"\n"+CostAmount.ToString();
 	}
 	
 	// Update is called once per frame

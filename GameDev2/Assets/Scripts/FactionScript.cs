@@ -15,6 +15,17 @@ public class FactionScript : MonoBehaviour {
 	GameObject[] contracts = new GameObject[3];
 	public GameObject contract;
 
+	int[,] contractPool = new int[8, 4] { 
+											{ 0, 1, 10, 3 }, 
+											{ 1, 1, 10, 3 }, 
+											{ 2, 1, 10, 3 }, 
+											{ 3, 1, 15, 5 },
+
+											{ 0, 5, 60, 5 }, 
+											{ 1, 5, 60, 5 }, 
+											{ 2, 5, 60, 5 }, 
+											{ 3, 3, 100, 7 } 
+																};
 
     // Use this for initialization
     void Start () {
@@ -27,10 +38,19 @@ public class FactionScript : MonoBehaviour {
 	}
 
 	public void createContracts() {
+
+		int randCon = 0;
 		for (int i = 0; i < 3; i++) 
 		{
+			randCon = Random.Range (0, 8);
 			GameObject tmp = (GameObject)Instantiate (contract, new Vector3 ((faction-1) * 14.9f + -7.45f, i * -2.5f + -6.5f,-1),Quaternion.identity);
 			tmp.GetComponent<ContractScript> ().Faction = faction;
+
+			tmp.GetComponent<ContractScript> ().CostType = contractPool [randCon, 0];
+			tmp.GetComponent<ContractScript> ().CostAmount = contractPool [randCon, 1];
+			tmp.GetComponent<ContractScript> ().RewardAmount = contractPool [randCon, 2];
+			tmp.GetComponent<ContractScript> ().PowerReward = contractPool [randCon, 3];
+
 			contracts[i] = tmp; //add Contract to array
 		}
 	}
