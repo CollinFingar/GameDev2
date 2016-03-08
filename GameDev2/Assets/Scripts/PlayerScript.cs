@@ -14,6 +14,11 @@ public class PlayerScript : MonoBehaviour {
     public Text BText;
     public Text CText;
 
+    private GameObject planetViewing;
+
+    public Button planetB1;
+    public Button planetB2;
+
     // Use this for initialization
     void Start () {
 	
@@ -25,5 +30,31 @@ public class PlayerScript : MonoBehaviour {
         AText.text = "A: "+resourceA.ToString();
         BText.text = "B: "+resourceB.ToString();
         CText.text = "C: "+resourceC.ToString();
+    }
+
+    public void assignPlanet(GameObject p) {
+        planetViewing = p;
+    }
+
+    public void doPlanetB1Action() {
+        planetViewing.GetComponent<PlanetScript>().doB1Action();
+    }
+
+    public void doPlanetB2Action()
+    {
+        planetViewing.GetComponent<PlanetScript>().doB2Action();
+    }
+
+    public void increaseResource(string type, int amount) {
+        if (type == "A") {
+            resourceA += amount;
+        } else if (type == "B")
+        {
+            resourceB += amount;
+        }
+        else if (type == "C")
+        {
+            resourceC += amount;
+        }
     }
 }

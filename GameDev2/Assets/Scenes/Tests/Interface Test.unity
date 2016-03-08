@@ -1540,11 +1540,20 @@ MonoBehaviour:
     enter
 
     more stufff lololol'
+  button1String: Do this Action
+  button2String: Do THIS Action
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
+  b1Cost: 10
+  b1Reward: 10
+  b1RewardType: A
+  b2Cost: 10
+  b2Reward: 10
+  b2RewardType: B
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
+  player: {fileID: 843346282}
   movedIn: 0
 --- !u!61 &464856308
 BoxCollider2D:
@@ -1748,11 +1757,20 @@ MonoBehaviour:
     enter
 
     more stufff lololol'
+  button1String: Do this Action
+  button2String: Do THIS Action
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
+  b1Cost: 10
+  b1Reward: 10
+  b1RewardType: A
+  b2Cost: 10
+  b2Reward: 10
+  b2RewardType: B
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
+  player: {fileID: 843346282}
   movedIn: 0
 --- !u!61 &493339808
 BoxCollider2D:
@@ -2125,6 +2143,12 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 110508, guid: 51559b1f78ec87642ab385816156c033, type: 2}
   m_PrefabInternal: {fileID: 303380464}
+--- !u!114 &843346283 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033,
+    type: 2}
+  m_PrefabInternal: {fileID: 303380464}
+  m_Script: {fileID: 11500000, guid: 3a4be647e4ea83d459dcf7a7d1cfdfd4, type: 3}
 --- !u!1 &844646437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,7 +3023,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5441177, g: 0.5441177, b: 0.5441177, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.8897059, g: 0.8897059, b: 0.8897059, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3016,7 +3040,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095986212}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 843346283}
+        m_MethodName: doPlanetB2Action
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1095986212
@@ -3928,11 +3963,20 @@ MonoBehaviour:
     enter
 
     more stufff lololol'
+  button1String: Do this Action
+  button2String: Do THIS Action
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
+  b1Cost: 10
+  b1Reward: 10
+  b1RewardType: A
+  b2Cost: 10
+  b2Reward: 10
+  b2RewardType: B
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
+  player: {fileID: 843346282}
   movedIn: 0
 --- !u!61 &1314148457
 BoxCollider2D:
@@ -5960,8 +6004,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6838235, g: 0.6838235, b: 0.6838235, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.5147059, g: 0.5147059, b: 0.5147059, a: 1}
+    m_PressedColor: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5979,12 +6023,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 843346282}
-        m_MethodName: 
+      - m_Target: {fileID: 843346283}
+        m_MethodName: doPlanetB1Action
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6513,11 +6557,20 @@ MonoBehaviour:
     enter
 
     more stufff lololol'
+  button1String: Do this Action
+  button2String: Do THIS Action
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
+  b1Cost: 10
+  b1Reward: 10
+  b1RewardType: A
+  b2Cost: 10
+  b2Reward: 10
+  b2RewardType: B
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
+  player: {fileID: 843346282}
   movedIn: 0
 --- !u!61 &2128300339
 BoxCollider2D:
