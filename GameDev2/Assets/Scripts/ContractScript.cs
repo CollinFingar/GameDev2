@@ -20,6 +20,7 @@ public class ContractScript : MonoBehaviour {
 
 	private int[] values = new int[4];
 
+	public GameObject myFaction;
 	// Use this for initialization
 	void Start () {
 		if (CostType == 0) {
@@ -129,6 +130,7 @@ public class ContractScript : MonoBehaviour {
 					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().money += RewardAmount;
 					SetCompletedColor ();
+					myFaction.GetComponent<FactionScript> ().power += PowerReward;
 					completed = true;
 				}
 			}
@@ -139,6 +141,7 @@ public class ContractScript : MonoBehaviour {
 					player.GetComponent<PlayerScript> ().resourceC -= (3 * CostAmount);
 					player.GetComponent<PlayerScript> ().money += RewardAmount;
 					SetCompletedColor ();
+					myFaction.GetComponent<FactionScript> ().power += PowerReward;
 					completed = true;
 				}
 			}
@@ -148,6 +151,7 @@ public class ContractScript : MonoBehaviour {
 					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceB -= (3 * CostAmount);
 					player.GetComponent<PlayerScript> ().money += RewardAmount;
+					myFaction.GetComponent<FactionScript> ().power += PowerReward;
 					SetCompletedColor ();
 					completed = true;
 				}
@@ -159,6 +163,7 @@ public class ContractScript : MonoBehaviour {
 					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().money += RewardAmount;
+					myFaction.GetComponent<FactionScript> ().power += PowerReward;
 					SetCompletedColor ();
 					completed = true;
 				}

@@ -23,6 +23,7 @@ public class FactionScript : MonoBehaviour {
 	GameObject[] contracts = new GameObject[3];
 	public GameObject contract;
 
+	//CostType, CostAmount, RewardAmount, PowerReward 
 	int[,] contractPool = new int[8, 4] { 
 											{ 0, 1, 10, 3 }, 
 											{ 1, 1, 10, 3 }, 
@@ -36,8 +37,8 @@ public class FactionScript : MonoBehaviour {
 																};
 
     // Use this for initialization
-    void Start () {
-	
+	void Start () {
+		//contract.GetComponent<ContractScript> ().myFaction = this.gameObject;
 	}
 	
 	// Update is called once per frame
@@ -62,6 +63,7 @@ public class FactionScript : MonoBehaviour {
 			randCon = Random.Range (0, 8);
 			GameObject tmp = (GameObject)Instantiate (contract, new Vector3 ((faction-1) * 14.9f + -7.45f, i * -2.5f + -6.5f,-1),Quaternion.identity);
 			tmp.GetComponent<ContractScript> ().Faction = faction;
+			tmp.GetComponent<ContractScript> ().myFaction = this.gameObject;
 
 			tmp.GetComponent<ContractScript> ().CostType = contractPool [randCon, 0];
 			tmp.GetComponent<ContractScript> ().CostAmount = contractPool [randCon, 1];
