@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
-    public float money = 111;
-    public float resourceA = 222;
-    public float resourceB = 333;
-    public float resourceC = 444;
+    public float money = 0;
+    public float resourceA = 0;
+    public float resourceB = 0;
+    public float resourceC = 0;
 
     public Text moneyText;
     public Text AText;
@@ -21,9 +21,13 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        moneyText.text = money.ToString();
-        AText.text = resourceA.ToString();
-        BText.text = resourceB.ToString();
-        CText.text = resourceC.ToString();
+        moneyText.text = "$: "+money.ToString();
+        AText.text = "A: "+resourceA.ToString();
+        BText.text = "B: "+resourceB.ToString();
+        CText.text = "C: "+resourceC.ToString();
+
+		resourceA = resourceA;
+		resourceB = resourceB;
+		resourceC = resourceC;
     }
 }

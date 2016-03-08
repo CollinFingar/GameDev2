@@ -14,6 +14,9 @@ public class ContractScript : MonoBehaviour {
 	public int moveType = 0; //type of movement (0 = creation, 1 = expire)
 	Text desc;
 
+	public GameObject player;
+	private bool completed = false;
+
 	private int[] values = new int[4];
 
 	// Use this for initialization
@@ -33,7 +36,7 @@ public class ContractScript : MonoBehaviour {
 		if (CostType == 3) {
 			type = "Ships";
 		}
-
+			
 		desc = this.gameObject.GetComponentInChildren<Text> ();
 		desc.text = type+"\n"+CostAmount.ToString();
 	}
@@ -80,13 +83,21 @@ public class ContractScript : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        SetHoverColor();
+		if (completed == false) {
+			SetHoverColor ();
+		}
     }
 
     void OnMouseExit()
     {
-        ResetColor();
+		if (completed == false) {
+			ResetColor ();
+		}
     }
+
+	void SetCompletedColor(){
+		GetComponent<SpriteRenderer>().color = Color.green;
+	}
 
     void SetHoverColor()
     {
@@ -109,7 +120,47 @@ public class ContractScript : MonoBehaviour {
         //================
         //Do Whatever Here
         //================
+		if (completed == false) {
+			if (type == "Shield") {
+				if (player.GetComponent<PlayerScript> ().resourceA >= (3 * CostAmount) && player.GetComponent<PlayerScript> ().resourceB >= (2 * CostAmount)) {
+					player.GetComponent<PlayerScript> ().resourceA -= (3 * CostAmount);
+					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
+					SetCompletedColor ();
+					completed = true;
+				}
+			}
+
+			if (type == "Guns") {
+				if (player.GetComponent<PlayerScript> ().resourceA >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (3 * CostAmount)) {
+					player.GetComponent<PlayerScript> ().resourceA -= (2 * CostAmount);
+					player.GetComponent<PlayerScript> ().resourceC -= (3 * CostAmount);
+					SetCompletedColor ();
+					completed = true;
+				}
+			}
+
+			if (type == "Explosives") {
+				if (player.GetComponent<PlayerScript> ().resourceB >= (3 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (2 * CostAmount)) {
+					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
+					player.GetComponent<PlayerScript> ().resourceB -= (3 * CostAmount);
+					SetCompletedColor ();
+					completed = true;
+				}
+			}
+
+			if (type == "Ships") {
+				if (player.GetComponent<PlayerScript> ().resourceA >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceB >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (2 * CostAmount)) {
+					player.GetComponent<PlayerScript> ().resourceA -= (2 * CostAmount);
+					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
+					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
+					SetCompletedColor ();
+					completed = true;
+				}
+			}
+		}
+
         Debug.Log("You hit: " + gameObject.name);
+
     }
 
 

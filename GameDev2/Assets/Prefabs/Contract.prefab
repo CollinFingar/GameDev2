@@ -136,9 +136,11 @@ MonoBehaviour:
   RewardAmount: 0
   CostAmount: 0
   CostType: 0
+  PowerReward: 0
   DecayRate: 0
   moveTime: 50
   moveType: 0
+  player: {fileID: 110508, guid: 51559b1f78ec87642ab385816156c033, type: 2}
 --- !u!114 &11476590
 MonoBehaviour:
   m_ObjectHideFlags: 1

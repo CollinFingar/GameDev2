@@ -381,7 +381,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: F2-4
@@ -781,9 +781,11 @@ MonoBehaviour:
   RewardAmount: 0
   CostAmount: 0
   CostType: 0
+  PowerReward: 0
   DecayRate: 0
   moveTime: 0
   moveType: 0
+  player: {fileID: 0}
 --- !u!212 &156315373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1033,10 +1035,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 1
   money: 0
-  infantryPowerValue: 0
-  spacePowerValue: 0
-  infantryResources: 0000000000000000000000000000000000000000
-  spaceResources: 0000000000000000000000000000000000000000
+  armor: 0
+  guns: 0
+  explosives: 0
+  ships: 0
+  armorText: {fileID: 605451932}
+  gunsText: {fileID: 1239742299}
+  explosivesText: {fileID: 2105040449}
+  shipsText: {fileID: 1419837653}
   contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
 --- !u!4 &278379907
 Transform:
@@ -1111,9 +1117,11 @@ MonoBehaviour:
   RewardAmount: 0
   CostAmount: 0
   CostType: 0
+  PowerReward: 0
   DecayRate: 0
   moveTime: 0
   moveType: 0
+  player: {fileID: 0}
 --- !u!212 &293404184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1145,6 +1153,64 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &303380464
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.3380892
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.006533593
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467950, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: moneyText
+      value: 
+      objectReference: {fileID: 371188359}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: AText
+      value: 
+      objectReference: {fileID: 205898076}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: BText
+      value: 
+      objectReference: {fileID: 1753829866}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: CText
+      value: 
+      objectReference: {fileID: 1341023185}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &308781580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,10 +1586,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 2
   money: 0
-  infantryPowerValue: 0
-  spacePowerValue: 0
-  infantryResources: 0000000000000000000000000000000000000000
-  spaceResources: 0000000000000000000000000000000000000000
+  armor: 0
+  guns: 0
+  explosives: 0
+  ships: 0
+  armorText: {fileID: 905905464}
+  gunsText: {fileID: 1762926683}
+  explosivesText: {fileID: 1975852787}
+  shipsText: {fileID: 35160525}
   contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
 --- !u!4 &466273939
 Transform:
@@ -1931,7 +2001,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'F1-1
@@ -2108,9 +2178,11 @@ MonoBehaviour:
   RewardAmount: 0
   CostAmount: 0
   CostType: 0
+  PowerReward: 0
   DecayRate: 0
   moveTime: 0
   moveType: 0
+  player: {fileID: 0}
 --- !u!212 &844646441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2468,7 +2540,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'F2-1
@@ -3471,9 +3543,11 @@ MonoBehaviour:
   RewardAmount: 0
   CostAmount: 0
   CostType: 0
+  PowerReward: 0
   DecayRate: 0
   moveTime: 0
   moveType: 0
+  player: {fileID: 0}
 --- !u!212 &1237225274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3568,7 +3642,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: F1-2
@@ -4121,7 +4195,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: F1-4
@@ -4921,9 +4995,11 @@ MonoBehaviour:
   RewardAmount: 0
   CostAmount: 0
   CostType: 0
+  PowerReward: 0
   DecayRate: 0
   moveTime: 0
   moveType: 0
+  player: {fileID: 0}
 --- !u!212 &1749183483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5149,7 +5225,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: F2-2
@@ -5692,7 +5768,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: F2-3
@@ -5817,53 +5893,6 @@ Transform:
   - {fileID: 1341983828}
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!1 &2010635178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2010635179}
-  - 114: {fileID: 2010635180}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2010635179
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010635178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3380892, y: -0.006533593, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
---- !u!114 &2010635180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010635178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a4be647e4ea83d459dcf7a7d1cfdfd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  money: 111
-  resourceA: 222
-  resourceB: 333
-  resourceC: 444
-  moneyText: {fileID: 371188359}
-  AText: {fileID: 205898076}
-  BText: {fileID: 1753829866}
-  CText: {fileID: 1341023185}
 --- !u!1 &2019365313
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,7 +6271,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: F1-3

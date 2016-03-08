@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FactionScript : MonoBehaviour {
 
@@ -7,10 +8,15 @@ public class FactionScript : MonoBehaviour {
 
     public float money = 0;
 
-    public float infantryPowerValue = 0;
-    public float spacePowerValue = 0;
-    public int[] infantryResources = new int[5];
-    public int[] spaceResources = new int[5];
+	public int armor = 0;
+	public int guns = 0;
+	public int explosives = 0;
+	public int ships = 0;
+
+	public Text armorText;
+	public Text gunsText;
+	public Text explosivesText;
+	public Text shipsText;
 
 	GameObject[] contracts = new GameObject[3];
 	public GameObject contract;
@@ -34,6 +40,11 @@ public class FactionScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		armorText.text = "Armor: " + armor.ToString ();
+		gunsText.text = "Guns: " + guns.ToString ();
+		explosivesText.text = "Explosives: " + explosives.ToString ();
+		shipsText.text = "Ships: " + ships.ToString ();
 
 	}
 
