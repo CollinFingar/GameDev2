@@ -4,6 +4,8 @@ using System.Collections;
 public class WarScript : MonoBehaviour {
     public GameObject Faction1;
     public GameObject Faction2;
+	public int F1power;
+	public int F2power;
     
     public float warStatus = .5f;
 
@@ -18,17 +20,10 @@ public class WarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.RightArrow)){
-            if(warStatus < 1)
-            {
-                warStatus += .01f;
-            }
-        } else if (Input.GetKey(KeyCode.LeftArrow)){
-            if(warStatus > 0)
-            {
-                warStatus -= .01f;
-            }
-        }
+		F1power = Faction1.GetComponent<FactionScript> ().power;
+		F2power = Faction2.GetComponent<FactionScript> ().power;
+		warStatus += ((F1power - F2power) * 0.00001f);
+
         colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 	}
 }
