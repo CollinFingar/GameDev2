@@ -13,6 +13,8 @@ public class FactionScript : MonoBehaviour {
 	public int explosives = 0;
 	public int ships = 0;
 
+	public int power = 0;
+
 	public Text armorText;
 	public Text gunsText;
 	public Text explosivesText;
