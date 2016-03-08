@@ -48,6 +48,10 @@ public class FactionScript : MonoBehaviour {
 		explosivesText.text = "Explosives: " + explosives.ToString ();
 		shipsText.text = "Ships: " + ships.ToString ();
 
+		if (contract.GetComponent<ContractScript> ().completed == true) {
+			power += contract.GetComponent<ContractScript> ().PowerReward;
+		}
+
 	}
 
 	public void createContracts() {
