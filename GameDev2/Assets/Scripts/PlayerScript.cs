@@ -25,9 +25,5 @@ public class PlayerScript : MonoBehaviour {
         AText.text = "A: "+resourceA.ToString();
         BText.text = "B: "+resourceB.ToString();
         CText.text = "C: "+resourceC.ToString();
-
-		resourceA = resourceA;
-		resourceB = resourceB;
-		resourceC = resourceC;
     }
 }

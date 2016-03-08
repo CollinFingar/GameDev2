@@ -15,7 +15,8 @@ public class ContractScript : MonoBehaviour {
 	Text desc;
 
 	public GameObject player;
-	private bool completed = false;
+
+	public bool completed = false;
 
 	private int[] values = new int[4];
 
@@ -125,6 +126,7 @@ public class ContractScript : MonoBehaviour {
 				if (player.GetComponent<PlayerScript> ().resourceA >= (3 * CostAmount) && player.GetComponent<PlayerScript> ().resourceB >= (2 * CostAmount)) {
 					player.GetComponent<PlayerScript> ().resourceA -= (3 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
+					player.GetComponent<PlayerScript> ().money += RewardAmount;
 					SetCompletedColor ();
 					completed = true;
 				}
@@ -134,6 +136,7 @@ public class ContractScript : MonoBehaviour {
 				if (player.GetComponent<PlayerScript> ().resourceA >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (3 * CostAmount)) {
 					player.GetComponent<PlayerScript> ().resourceA -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceC -= (3 * CostAmount);
+					player.GetComponent<PlayerScript> ().money += RewardAmount;
 					SetCompletedColor ();
 					completed = true;
 				}
@@ -143,6 +146,7 @@ public class ContractScript : MonoBehaviour {
 				if (player.GetComponent<PlayerScript> ().resourceB >= (3 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (2 * CostAmount)) {
 					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceB -= (3 * CostAmount);
+					player.GetComponent<PlayerScript> ().money += RewardAmount;
 					SetCompletedColor ();
 					completed = true;
 				}
@@ -153,6 +157,7 @@ public class ContractScript : MonoBehaviour {
 					player.GetComponent<PlayerScript> ().resourceA -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
 					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
+					player.GetComponent<PlayerScript> ().money += RewardAmount;
 					SetCompletedColor ();
 					completed = true;
 				}
