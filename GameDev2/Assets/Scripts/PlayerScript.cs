@@ -30,6 +30,9 @@ public class PlayerScript : MonoBehaviour {
         AText.text = "A: "+resourceA.ToString();
         BText.text = "B: "+resourceB.ToString();
         CText.text = "C: "+resourceC.ToString();
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
     }
 
     public void assignPlanet(GameObject p) {
