@@ -24,9 +24,13 @@ public class CameraScript : MonoBehaviour {
     public Canvas canvas;
     public Canvas interfaceCanvas;
 
+    public GameObject timer;
+    public TimerScript tScript;
+
 	// Use this for initialization
 	void Start () {
         canvas.gameObject.SetActive(false);
+        tScript = timer.GetComponent<TimerScript>();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +43,7 @@ public class CameraScript : MonoBehaviour {
     }
 
     public void moveIn(GameObject location){
+        tScript.paused = true;
         zoomedInPostion = new Vector3(location.transform.position.x + 1,
                                        location.transform.position.y,
                                        -10);
@@ -62,6 +67,7 @@ public class CameraScript : MonoBehaviour {
     }
 
     public void moveOut(){
+        tScript.paused = false;
         //mainCameraScript.orthographicSize = zoomedOutScale;
         mainInterface.SetActive(true);
         startTime = Time.time;
