@@ -3,45 +3,29 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ContractScript : MonoBehaviour {
-    public int Faction = 0;
-    public int RewardAmount = 0;
-    public int CostAmount = 0;
-    public int CostType = 0;
-	private string type;
-	public int PowerReward = 0;
-    public float DecayRate = 0;
+
+	//Properties
+	public string supply;
+	public int max = 5;
+	public int reward = 0;
+	public int filled = 0;
+	public bool complete = false;
+	//#######################//
+
+	//Contract motion
+	public int Faction = 0;
 	public float moveTime = 0;
 	public int moveType = 0; //type of movement (0 = creation, 1 = expire)
 	Text desc;
+	//######################################################################//
 
 	public GameObject player;
 
-	public bool completed = false;
-
-	private int[] values = new int[4];
-
-	public GameObject myFaction;
 	// Use this for initialization
 	void Start () {
-		if (CostType == 0) {
-			type = "Shield";
-		}
-
-		if (CostType == 1) {
-			type = "Guns";
-		}
-
-		if (CostType == 2) {
-			type = "Explosives";
-		}
-
-		if (CostType == 3) {
-			type = "Ships";
-		}
-
 		player = GameObject.FindGameObjectWithTag ("Player");
 		desc = this.gameObject.GetComponentInChildren<Text> ();
-		desc.text = type+"\n"+CostAmount.ToString();
+		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString();
 	}
 	
 	// Update is called once per frame
@@ -50,7 +34,6 @@ public class ContractScript : MonoBehaviour {
 		{
 			moveContract ();
 		}
-		drawContract ();
 	}
 
 	void moveContract()
@@ -80,20 +63,16 @@ public class ContractScript : MonoBehaviour {
 		}
 	}
 
-	void drawContract() {
-		
-	}
-
     void OnMouseEnter()
     {
-		if (completed == false) {
+		if (complete == false) {
 			SetHoverColor ();
 		}
     }
 
     void OnMouseExit()
     {
-		if (completed == false) {
+		if (complete == false) {
 			ResetColor ();
 		}
     }
@@ -123,51 +102,8 @@ public class ContractScript : MonoBehaviour {
         //================
         //Do Whatever Here
         //================
-		if (completed == false) {
-			if (type == "Shield") {
-				if (player.GetComponent<PlayerScript> ().resourceA >= (3 * CostAmount) && player.GetComponent<PlayerScript> ().resourceB >= (2 * CostAmount)) {
-					player.GetComponent<PlayerScript> ().resourceA -= (3 * CostAmount);
-					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
-					player.GetComponent<PlayerScript> ().money += RewardAmount;
-					SetCompletedColor ();
-					myFaction.GetComponent<FactionScript> ().power += PowerReward;
-					completed = true;
-				}
-			}
-
-			if (type == "Guns") {
-				if (player.GetComponent<PlayerScript> ().resourceA >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (3 * CostAmount)) {
-					player.GetComponent<PlayerScript> ().resourceA -= (2 * CostAmount);
-					player.GetComponent<PlayerScript> ().resourceC -= (3 * CostAmount);
-					player.GetComponent<PlayerScript> ().money += RewardAmount;
-					SetCompletedColor ();
-					myFaction.GetComponent<FactionScript> ().power += PowerReward;
-					completed = true;
-				}
-			}
-
-			if (type == "Explosives") {
-				if (player.GetComponent<PlayerScript> ().resourceB >= (3 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (2 * CostAmount)) {
-					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
-					player.GetComponent<PlayerScript> ().resourceB -= (3 * CostAmount);
-					player.GetComponent<PlayerScript> ().money += RewardAmount;
-					myFaction.GetComponent<FactionScript> ().power += PowerReward;
-					SetCompletedColor ();
-					completed = true;
-				}
-			}
-
-			if (type == "Ships") {
-				if (player.GetComponent<PlayerScript> ().resourceA >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceB >= (2 * CostAmount) && player.GetComponent<PlayerScript> ().resourceC >= (2 * CostAmount)) {
-					player.GetComponent<PlayerScript> ().resourceA -= (2 * CostAmount);
-					player.GetComponent<PlayerScript> ().resourceC -= (2 * CostAmount);
-					player.GetComponent<PlayerScript> ().resourceB -= (2 * CostAmount);
-					player.GetComponent<PlayerScript> ().money += RewardAmount;
-					myFaction.GetComponent<FactionScript> ().power += PowerReward;
-					SetCompletedColor ();
-					completed = true;
-				}
-			}
+		if (complete == false) {
+			
 		}
         
     }
