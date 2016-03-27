@@ -32,11 +32,21 @@ public class PlanetScript : MonoBehaviour {
 
     public bool movedIn = false;
 
-	// Use this for initialization
-	void Start () {
+    public ParticleSystem blueParticleSystem;
+    public ParticleSystem greenParticleSystem;
+    public ParticleSystem redParticleSystem;
+
+
+    // Use this for initialization
+    void Start () {
         cs = mainCamera.GetComponent<CameraScript>();
         ps = player.GetComponent<PlayerScript>();
-	}
+
+        blueParticleSystem.enableEmission = false;
+        greenParticleSystem.enableEmission = false;
+        redParticleSystem.enableEmission = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -64,6 +74,7 @@ public class PlanetScript : MonoBehaviour {
         if (ps.money >= b1Cost) {
             ps.money -= b1Cost;
             ps.increaseResource(b1RewardType, b1Reward);
+            spawnResource("B");
         }
     }
 
@@ -74,7 +85,14 @@ public class PlanetScript : MonoBehaviour {
         {
             ps.money -= b2Cost;
             ps.increaseResource(b2RewardType, b2Reward);
+            spawnResource("B");
         }
+    }
+
+    public void spawnResource(string b2RewardType) {
+        blueParticleSystem.enableEmission = true;
+
+        //instance.transform.position = gameObject.transform.position;
     }
 
 

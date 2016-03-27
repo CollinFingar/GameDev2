@@ -169,9 +169,7 @@ public class ContractScript : MonoBehaviour {
 				}
 			}
 		}
-
-        Debug.Log("You hit: " + gameObject.name);
-
+        
     }
 
 

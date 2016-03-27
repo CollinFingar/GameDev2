@@ -11,7 +11,6 @@ public class CameraScript : MonoBehaviour {
     private bool movingIn = false;
     private bool movingOut = false;
     public float speed = .1f;
-    public float journeyLength = 1f;
 
     private float startTime = 0f;
     private float currentMovingTime = 0f;
@@ -32,12 +31,6 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            moveIn(testObject);
-        } else if (Input.GetKeyDown(KeyCode.X)){
-            moveOut();
-        }
         if (movingIn){
             updateMoveIn();
         } else if (movingOut){
@@ -52,7 +45,6 @@ public class CameraScript : MonoBehaviour {
         mainInterface.SetActive(false);
         startTime = Time.time;
         currentMovingTime = startTime;
-        journeyLength = Vector3.Distance(zoomedOutPosition, zoomedInPostion);
         movingIn = true;
         interfaceCanvas.gameObject.SetActive(false);
     }
@@ -72,7 +64,6 @@ public class CameraScript : MonoBehaviour {
     public void moveOut(){
         //mainCameraScript.orthographicSize = zoomedOutScale;
         mainInterface.SetActive(true);
-        journeyLength = Vector3.Distance(zoomedOutPosition, zoomedInPostion);
         startTime = Time.time;
         currentMovingTime = startTime;
         movingOut = true;
