@@ -23,6 +23,7 @@ public class PlanetScript : MonoBehaviour {
     public int b2Reward = 10;
     public string b2RewardType = "Plasma";
 
+    private bool longTerm = false;
 
     public Button b1;
     public Button b2;
@@ -35,6 +36,19 @@ public class PlanetScript : MonoBehaviour {
     public ParticleSystem blueParticleSystem;
     public ParticleSystem greenParticleSystem;
     public ParticleSystem redParticleSystem;
+
+    public int mineNumberIterations = 5;
+    public float mineNumberResourceIncrease = 1.5f;
+    public float mineNumberMoneyIncrease = 1.5f;
+
+    private ArrayList mines = new ArrayList();
+        //Arraylist of arraylists
+            //0 = num iterations left
+            //1 = resource type to give
+            //2 = resource amount to give
+    public bool onlyOneMine = true;
+    private bool b1Mine = false;
+    private bool b2Mine = false;
 
 
     // Use this for initialization
@@ -50,7 +64,7 @@ public class PlanetScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    
+        
 	}
 
     void OnMouseDown() {
@@ -71,21 +85,62 @@ public class PlanetScript : MonoBehaviour {
 
     public void doB1Action() {
         Debug.Log("Doing B1 action for " + planetName);
-        if (ps.money >= b1Cost) {
-            ps.money -= b1Cost;
-            ps.increaseResource(b1RewardType, b1Reward);
-            spawnResource("B");
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+            longTerm = true;
+        } else {
+            longTerm = false;
         }
+
+        if (!longTerm) {
+            if (ps.money >= b1Cost) {
+                ps.money -= b1Cost;
+                ps.increaseResource(b1RewardType, b1Reward);
+                spawnResource("B");
+            }
+        } else {
+            if (ps.money >= b1Cost) {
+                ArrayList mine = new ArrayList();
+                mine.Add(mineNumberIterations);
+                mine.Add(b1RewardType);
+                int rewaredAmount = (int)(b1Reward * mineNumberResourceIncrease / mineNumberIterations);
+                mine.Add(rewaredAmount);
+                mines.Add(mine);
+            }
+        }
+
     }
 
     public void doB2Action()
     {
         Debug.Log("Doing B2 action for " + planetName);
-        if (ps.money >= b2Cost)
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
+            longTerm = true;
+        } else {
+            longTerm = false;
+        }
+
+        if (!longTerm)
         {
-            ps.money -= b2Cost;
-            ps.increaseResource(b2RewardType, b2Reward);
-            spawnResource("B");
+            if (ps.money >= b1Cost)
+            {
+                ps.money -= b1Cost;
+                ps.increaseResource(b1RewardType, b1Reward);
+                spawnResource("B");
+            }
+        }
+        else
+        {
+            if (ps.money >= b1Cost)
+            {
+                ArrayList mine = new ArrayList();
+                mine.Add(mineNumberIterations);
+                mine.Add(b1RewardType);
+                int rewaredAmount = (int)(b1Reward * mineNumberResourceIncrease / mineNumberIterations);
+                mine.Add(rewaredAmount);
+                mines.Add(mine);
+            }
         }
     }
 
@@ -95,5 +150,25 @@ public class PlanetScript : MonoBehaviour {
         //instance.transform.position = gameObject.transform.position;
     }
 
+    public void contractsFinish() {
+        for (int i = 0; i < mines.Count; i++) {
+            ArrayList mine = (ArrayList)mines[i];
+            int numIterations = (int)mine[0] - 1;
+            string resourceType = (string)mine[1];
+            int resourceAmount = (int)mine[2];
+            ps.increaseResource(resourceType, resourceAmount);
+
+
+            if (numIterations == 0)
+            {
+                mines.RemoveAt(i);
+            }
+            else {
+                mine[0] = numIterations;
+            }
+
+
+        }
+    }
 
 }

@@ -11,9 +11,13 @@ public class TimerScript : MonoBehaviour {
 
     public bool inProgress = false;
 
+    public bool paused = false;
+
     public Sprite[] sprites = new Sprite[8];
 
     public GameObject sprite;
+
+    public GameObject[] planets = new GameObject[6];
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +27,15 @@ public class TimerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (inProgress) 
-		{
-			updateTimer ();
-		} 
-		else 
+        if (inProgress && !paused)
+        {
+            updateTimer();
+        }
+        else if (inProgress && paused) {
+            timerStart += Time.deltaTime;
+            timerEnd += Time.deltaTime;
+            updateSpriteTime += Time.deltaTime;
+        } else
 		{
 			startTimer (timerLength);
 		}
@@ -60,6 +68,7 @@ public class TimerScript : MonoBehaviour {
 			GameObject.Find ("Faction1").GetComponent<FactionScript> ().destroyContracts ();
 			GameObject.Find ("Faction2").GetComponent<FactionScript> ().destroyContracts ();
             inProgress = false;
+            sendFinishToPlanets();
         }
         else
         {
@@ -77,5 +86,12 @@ public class TimerScript : MonoBehaviour {
     {
         sprite.GetComponent<SpriteRenderer>().sprite = sprites[currentSpriteNum];
         Debug.Log("updating sprite: " + currentSpriteNum);
+    }
+
+    void sendFinishToPlanets() {
+        for (int i = 0; i < planets.Length; i++) {
+            PlanetScript ps = planets[i].GetComponent<PlanetScript>();
+            ps.contractsFinish();
+        }
     }
 }
