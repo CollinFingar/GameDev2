@@ -1862,7 +1862,7 @@ MonoBehaviour:
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
-  spriteLeader: {fileID: 0}
+  spriteLeader: {fileID: 21300000, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   player: {fileID: 843346282}
   movedIn: 0
   blueParticleSystem: {fileID: 19845926, guid: bc153aa694b07a244b55bd29c9e14543, type: 2}
@@ -2568,7 +2568,7 @@ MonoBehaviour:
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
-  spriteLeader: {fileID: 0}
+  spriteLeader: {fileID: 21300002, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   player: {fileID: 843346282}
   movedIn: 0
   blueParticleSystem: {fileID: 19845926, guid: bc153aa694b07a244b55bd29c9e14543, type: 2}
@@ -4708,7 +4708,7 @@ MonoBehaviour:
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
-  spriteLeader: {fileID: 0}
+  spriteLeader: {fileID: 21300004, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   player: {fileID: 843346282}
   movedIn: 0
   blueParticleSystem: {fileID: 19845926, guid: bc153aa694b07a244b55bd29c9e14543, type: 2}
