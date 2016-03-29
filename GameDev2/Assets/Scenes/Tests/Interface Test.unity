@@ -837,6 +837,9 @@ MonoBehaviour:
   reward: 0
   filled: 0
   complete: 0
+  fuelCost: 0
+  metalCost: 0
+  plasmaCost: 0
   Faction: 0
   moveTime: 0
   moveType: 0
@@ -1090,27 +1093,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 1
   money: 0
-  robots: 0
-  humans: 0
-  priorities: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  quantity: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  supplies:
-  - Soldiers
-  - Guns
-  - Ammo
-  - Armor
-  - Explosives
-  - Ships
-  - Fuel
-  - Suits
-  - Artillery
-  - Medicine
-  - Element0
-  selectedContract:
-  - 
-  - 
-  - 
-  selectedContractPri: 000000000000000000000000
   power: 0
   armorText: {fileID: 605451932}
   gunsText: {fileID: 1239742299}
@@ -1191,6 +1173,9 @@ MonoBehaviour:
   reward: 0
   filled: 0
   complete: 0
+  fuelCost: 0
+  metalCost: 0
+  plasmaCost: 0
   Faction: 0
   moveTime: 0
   moveType: 0
@@ -1677,27 +1662,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 2
   money: 0
-  robots: 0
-  humans: 0
-  priorities: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  quantity: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  supplies:
-  - Soldiers
-  - Guns
-  - Ammo
-  - Armor
-  - Explosives
-  - Ships
-  - Fuel
-  - Suits
-  - Artillery
-  - Medicine
-  - Element0
-  selectedContract:
-  - 
-  - 
-  - 
-  selectedContractPri: 000000000000000000000000
   power: 0
   armorText: {fileID: 905905464}
   gunsText: {fileID: 1762926683}
@@ -2314,6 +2278,9 @@ MonoBehaviour:
   reward: 0
   filled: 0
   complete: 0
+  fuelCost: 0
+  metalCost: 0
+  plasmaCost: 0
   Faction: 0
   moveTime: 0
   moveType: 0
@@ -4032,6 +3999,9 @@ MonoBehaviour:
   reward: 0
   filled: 0
   complete: 0
+  fuelCost: 0
+  metalCost: 0
+  plasmaCost: 0
   Faction: 0
   moveTime: 0
   moveType: 0
@@ -5624,6 +5594,9 @@ MonoBehaviour:
   reward: 0
   filled: 0
   complete: 0
+  fuelCost: 0
+  metalCost: 0
+  plasmaCost: 0
   Faction: 0
   moveTime: 0
   moveType: 0
@@ -6559,6 +6532,7 @@ MonoBehaviour:
   - {fileID: 21300014, guid: 83469a0eb149bef43b5f30ad86813061, type: 3}
   - {fileID: 21300016, guid: 83469a0eb149bef43b5f30ad86813061, type: 3}
   sprite: {fileID: 1341983827}
+  contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
   planets:
   - {fileID: 2128300335}
   - {fileID: 464856304}
