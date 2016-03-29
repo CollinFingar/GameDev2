@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 1acc099f5bf2b084a9aa950b0ccc9fb5
-timeCreated: 1459106592
+timeCreated: 1459269149
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: spr_Leaders_0
+    21300002: spr_Leaders_1
+    21300004: spr_Leaders_2
+    21300006: spr_Leaders_3
+    21300008: spr_Leaders_4
+    21300010: spr_Leaders_5
+    21300012: spr_Leaders_6
+    21300014: spr_Leaders_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,11 +34,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +46,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +57,161 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: spr_Leaders_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 32}
+        - {x: -12, y: -32}
+        - {x: 8, y: -32}
+        - {x: 10, y: -31}
+        - {x: 13, y: -26}
+        - {x: 13, y: 32}
+    - name: spr_Leaders_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 25}
+        - {x: 6, y: 27}
+        - {x: -7, y: 27}
+        - {x: -10, y: 25}
+        - {x: -11, y: 18}
+        - {x: -11, y: -18}
+        - {x: -9, y: -31}
+        - {x: -7, y: -32}
+        - {x: 8, y: -32}
+        - {x: 10, y: -31}
+        - {x: 12, y: -9}
+    - name: spr_Leaders_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 30}
+        - {x: -12, y: 26}
+        - {x: -12, y: -21}
+        - {x: -8, y: -32}
+        - {x: 9, y: -32}
+        - {x: 13, y: -24}
+        - {x: 13, y: 28}
+        - {x: 12, y: 30}
+    - name: spr_Leaders_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: -15}
+        - {x: -10, y: -32}
+        - {x: 14, y: -32}
+        - {x: 16, y: -30}
+        - {x: 16, y: 24}
+        - {x: 10, y: 32}
+    - name: spr_Leaders_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 13}
+        - {x: 11, y: 29}
+        - {x: 5, y: 31}
+        - {x: -13, y: 31}
+        - {x: -13, y: -32}
+        - {x: 12, y: -32}
+        - {x: 12, y: -30}
+        - {x: 14, y: -18}
+    - name: spr_Leaders_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 32}
+        - {x: -10, y: 32}
+        - {x: -12, y: 24}
+        - {x: -12, y: -21}
+        - {x: -8, y: -32}
+        - {x: 10, y: -32}
+        - {x: 13, y: -24}
+        - {x: 13, y: 22}
+        - {x: 12, y: 26}
+    - name: spr_Leaders_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 29}
+        - {x: -8, y: 29}
+        - {x: -13, y: 22}
+        - {x: -13, y: -14}
+        - {x: -10, y: -32}
+        - {x: 10, y: -32}
+        - {x: 14, y: -17}
+        - {x: 14, y: 16}
+        - {x: 11, y: 26}
+    - name: spr_Leaders_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 31}
+        - {x: -8, y: 31}
+        - {x: -12, y: 27}
+        - {x: -12, y: -29}
+        - {x: -11, y: -32}
+        - {x: 9, y: -32}
+        - {x: 13, y: -21}
+        - {x: 13, y: 30}
     outline: []
   spritePackingTag: 
   userData: 

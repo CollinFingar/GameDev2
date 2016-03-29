@@ -651,8 +651,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.75, y: 0.5}
   m_AnchorMax: {x: 0.75, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 1000}
+  m_AnchoredPosition: {x: -50, y: 0}
+  m_SizeDelta: {x: 400, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119803466
 MonoBehaviour:
@@ -1603,6 +1603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: O'Malley's Orb
+  Spr_Leader: {fileID: 21300012, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
@@ -1840,6 +1841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Ved Emag
+  Spr_Leader: {fileID: 21300004, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
@@ -2544,6 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Ved Emag
+  Spr_Leader: {fileID: 21300002, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
@@ -3052,6 +3055,73 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1001719702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1001719703}
+  - 222: {fileID: 1001719705}
+  - 114: {fileID: 1001719704}
+  m_Layer: 0
+  m_Name: Leaders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1001719703
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001719702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1852040414}
+  m_RootOrder: 5
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 120, y: 0}
+  m_SizeDelta: {x: 100, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1001719704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001719702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300008, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1001719705
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001719702}
 --- !u!1 &1057084080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: ArrPeeAye
+  Spr_Leader: {fileID: 21300008, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   planetInfo: '"Welcome to our planet of scholars. For those worthy of paying the
     glorious tax, opportunities are abundant to serve the Empire.  We are open to
     trading metal that is left-over from building top-of-the-line tech, as well as
@@ -4613,6 +4684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Ved Emag
+  Spr_Leader: {fileID: 21300010, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
@@ -6175,6 +6247,7 @@ RectTransform:
   - {fileID: 2019365314}
   - {fileID: 1095986210}
   - {fileID: 1473485771}
+  - {fileID: 1001719703}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
@@ -7111,6 +7184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Enterpronia
+  Spr_Leader: {fileID: 21300014, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
