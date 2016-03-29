@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour {
 
     public float money = 0;
-    public float resourceA = 0;
-    public float resourceB = 0;
-    public float resourceC = 0;
+    public float resourceMetal = 0;
+    public float resourceFuel = 0;
+    public float resourcePlasma = 0;
 
     public Text moneyText;
     public Text AText;
@@ -21,15 +21,15 @@ public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
+        Screen.SetResolution(100, 80, true);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         moneyText.text = "$: "+money.ToString();
-        AText.text = "A: "+resourceA.ToString();
-        BText.text = "B: "+resourceB.ToString();
-        CText.text = "C: "+resourceC.ToString();
+        AText.text = "Metal: "+ resourceMetal.ToString();
+        BText.text = "Fuel: "+ resourceFuel.ToString();
+        CText.text = "Plasma: "+ resourcePlasma.ToString();
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
@@ -49,15 +49,15 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void increaseResource(string type, int amount) {
-        if (type == "A") {
-            resourceA += amount;
-        } else if (type == "B")
+        if (type == "Metal") {
+            resourceMetal += amount;
+        } else if (type == "Fuel")
         {
-            resourceB += amount;
+            resourceFuel += amount;
         }
-        else if (type == "C")
+        else if (type == "Plasma")
         {
-            resourceC += amount;
+            resourcePlasma += amount;
         }
     }
 }

@@ -832,17 +832,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b2c5449d89078429426a7255f84798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  supply: 
+  max: 5
+  reward: 0
+  filled: 0
+  complete: 0
   Faction: 0
-  RewardAmount: 0
-  CostAmount: 0
-  CostType: 0
-  PowerReward: 0
-  DecayRate: 0
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
-  completed: 0
-  myFaction: {fileID: 0}
 --- !u!212 &156315373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1092,10 +1090,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 1
   money: 0
-  armor: 0
-  guns: 0
-  explosives: 0
-  ships: 0
+  robots: 0
+  humans: 0
+  priorities: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  quantity: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  supplies:
+  - Soldiers
+  - Guns
+  - Ammo
+  - Armor
+  - Explosives
+  - Ships
+  - Fuel
+  - Suits
+  - Artillery
+  - Medicine
+  - Element0
+  selectedContract:
+  - 
+  - 
+  - 
+  selectedContractPri: 000000000000000000000000
   power: 0
   armorText: {fileID: 605451932}
   gunsText: {fileID: 1239742299}
@@ -1171,17 +1186,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b2c5449d89078429426a7255f84798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  supply: 
+  max: 5
+  reward: 0
+  filled: 0
+  complete: 0
   Faction: 0
-  RewardAmount: 0
-  CostAmount: 0
-  CostType: 0
-  PowerReward: 0
-  DecayRate: 0
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
-  completed: 0
-  myFaction: {fileID: 0}
 --- !u!212 &293404184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1599,10 +1612,10 @@ MonoBehaviour:
   planetInfoTextObject: {fileID: 1568182026}
   b1Cost: 10
   b1Reward: 10
-  b1RewardType: A
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: B
+  b2RewardType: FIGHT
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   player: {fileID: 843346282}
@@ -1658,10 +1671,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 2
   money: 0
-  armor: 0
-  guns: 0
-  explosives: 0
-  ships: 0
+  robots: 0
+  humans: 0
+  priorities: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  quantity: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  supplies:
+  - Soldiers
+  - Guns
+  - Ammo
+  - Armor
+  - Explosives
+  - Ships
+  - Fuel
+  - Suits
+  - Artillery
+  - Medicine
+  - Element0
+  selectedContract:
+  - 
+  - 
+  - 
+  selectedContractPri: 000000000000000000000000
   power: 0
   armorText: {fileID: 905905464}
   gunsText: {fileID: 1762926683}
@@ -1819,7 +1849,7 @@ MonoBehaviour:
   planetInfoTextObject: {fileID: 1568182026}
   b1Cost: 10
   b1Reward: 10
-  b1RewardType: A
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
   b2RewardType: C
@@ -2271,17 +2301,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b2c5449d89078429426a7255f84798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  supply: 
+  max: 5
+  reward: 0
+  filled: 0
+  complete: 0
   Faction: 0
-  RewardAmount: 0
-  CostAmount: 0
-  CostType: 0
-  PowerReward: 0
-  DecayRate: 0
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
-  completed: 0
-  myFaction: {fileID: 0}
 --- !u!212 &844646441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3922,17 +3950,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b2c5449d89078429426a7255f84798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  supply: 
+  max: 5
+  reward: 0
+  filled: 0
+  complete: 0
   Faction: 0
-  RewardAmount: 0
-  CostAmount: 0
-  CostType: 0
-  PowerReward: 0
-  DecayRate: 0
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
-  completed: 0
-  myFaction: {fileID: 0}
 --- !u!212 &1237225274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4307,10 +4333,10 @@ MonoBehaviour:
   planetInfoTextObject: {fileID: 1568182026}
   b1Cost: 10
   b1Reward: 10
-  b1RewardType: B
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: C
+  b2RewardType: Plasma
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   player: {fileID: 843346282}
@@ -5512,17 +5538,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b2c5449d89078429426a7255f84798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  supply: 
+  max: 5
+  reward: 0
+  filled: 0
+  complete: 0
   Faction: 0
-  RewardAmount: 0
-  CostAmount: 0
-  CostType: 0
-  PowerReward: 0
-  DecayRate: 0
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
-  completed: 0
-  myFaction: {fileID: 0}
 --- !u!212 &1749183483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7096,10 +7120,10 @@ MonoBehaviour:
   planetInfoTextObject: {fileID: 1568182026}
   b1Cost: 10
   b1Reward: 10
-  b1RewardType: A
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: B
+  b2RewardType: Fuel
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   player: {fileID: 843346282}
