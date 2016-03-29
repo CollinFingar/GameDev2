@@ -17,6 +17,8 @@ public class TimerScript : MonoBehaviour {
 
     public GameObject sprite;
 
+	public GameObject contract;
+
     public GameObject[] planets = new GameObject[6];
 
 	// Use this for initialization
@@ -93,5 +95,7 @@ public class TimerScript : MonoBehaviour {
             PlanetScript ps = planets[i].GetComponent<PlanetScript>();
             ps.contractsFinish();
         }
+
+		contract.GetComponent<ContractScript> ().cycleFinished ();
     }
 }

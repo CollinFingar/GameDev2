@@ -66,6 +66,7 @@ public class FactionScript : MonoBehaviour {
 
 			temp.GetComponent<ContractScript> ().supply = supplies [i].type;
 			temp.GetComponent<ContractScript> ().max = supplies [i].priority;
+			temp.GetComponent<ContractScript> ().reward = supplies [i].priority * 10;
 
 			contracts [i] = temp;
 		}
