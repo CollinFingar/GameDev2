@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlanetScript : MonoBehaviour {
 
     public string planetName = "Nilloc 244";
+	public Sprite Spr_Leader;
 
     public string planetInfo = "I'm a placeholder for info\nenter\nenter\nmore stufff lololol";
     public string button1String = "Do this Action";
@@ -77,6 +78,7 @@ public class PlanetScript : MonoBehaviour {
             b1.GetComponentInChildren<Text>().text = b1Cost.ToString() + " Money -> " + b1Reward.ToString() + " " + b1RewardType;
             b2.GetComponentInChildren<Text>().text = b2Cost.ToString() + " Money -> " + b2Reward.ToString() + " " + b2RewardType;
             ps.assignPlanet(gameObject);
+
         } else {
             cs.moveOut();
             movedIn = false;
