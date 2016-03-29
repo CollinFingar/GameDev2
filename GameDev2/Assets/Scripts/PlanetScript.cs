@@ -74,8 +74,8 @@ public class PlanetScript : MonoBehaviour {
             movedIn = true;
             planetNameTextObject.text = planetName;
             planetInfoTextObject.text = planetInfo;
-            b1.GetComponentInChildren<Text>().text = "Money -> " + b1RewardType;
-            b2.GetComponentInChildren<Text>().text = "Money -> " + b2RewardType;
+            b1.GetComponentInChildren<Text>().text = b1Cost.ToString() + " Money -> " + b1Reward.ToString() + " " + b1RewardType;
+            b2.GetComponentInChildren<Text>().text = b2Cost.ToString() + " Money -> " + b2Reward.ToString() + " " + b2RewardType;
             ps.assignPlanet(gameObject);
         } else {
             cs.moveOut();
@@ -101,6 +101,7 @@ public class PlanetScript : MonoBehaviour {
             }
         } else {
             if (ps.money >= b1Cost) {
+                ps.money -= b1Cost;
                 ArrayList mine = new ArrayList();
                 mine.Add(mineNumberIterations);
                 mine.Add(b1RewardType);
@@ -124,21 +125,22 @@ public class PlanetScript : MonoBehaviour {
 
         if (!longTerm)
         {
-            if (ps.money >= b1Cost)
+            if (ps.money >= b2Cost)
             {
-                ps.money -= b1Cost;
-                ps.increaseResource(b1RewardType, b1Reward);
+                ps.money -= b2Cost;
+                ps.increaseResource(b2RewardType, b2Reward);
                 spawnResource("B");
             }
         }
         else
         {
-            if (ps.money >= b1Cost)
+            if (ps.money >= b2Cost)
             {
+                ps.money -= b2Cost;
                 ArrayList mine = new ArrayList();
                 mine.Add(mineNumberIterations);
-                mine.Add(b1RewardType);
-                int rewaredAmount = (int)(b1Reward * mineNumberResourceIncrease / mineNumberIterations);
+                mine.Add(b2RewardType);
+                int rewaredAmount = (int)(b2Reward * mineNumberResourceIncrease / mineNumberIterations);
                 mine.Add(rewaredAmount);
                 mines.Add(mine);
             }

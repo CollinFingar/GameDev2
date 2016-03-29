@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Screen.SetResolution(100, 80, true);
+        //Screen.SetResolution(100, 80, true);
 	}
 	
 	// Update is called once per frame
