@@ -60,6 +60,7 @@ public class PlanetScript : MonoBehaviour {
         greenParticleSystem.enableEmission = false;
         redParticleSystem.enableEmission = false;
 
+        setPlanetInfo();
     }
 	
 	// Update is called once per frame
@@ -168,6 +169,16 @@ public class PlanetScript : MonoBehaviour {
             }
 
 
+        }
+    }
+
+    public void setPlanetInfo() {
+        if (planetName == "ArrPeeAye") {
+            planetInfo = "\"Welcome to our planet of scholars. For those worthy of paying the glorious tax, opportunities are abundant to serve the Empire.\n\nWe are open to trading metal that is left-over from building top-of-the-line tech, as well as element zero.\"\n\n - The Honorable";
+        } else if(planetName == "O'Malley's Orb") {
+            planetInfo = "\"Hello, dear friend! Welcome to the Orb! Here, we’re all as clever as clovers, don’tcha know!\n\nPlasma is what we have to sell, to be sure! We’re also willing to spill the Empire’s beer, if you catch my meaning!\"\n\n-Chloe the Lucky";
+        } else if(planetName == "Enterpronia") {
+            planetInfo = "\"Greetings, I am so glad you beamed down here. Our phasers are never set to stun in this hostile area.\n\nI spoke with Spook, and we have a surplus of metal and plasma, if trading was on your mind.\"\n\n-Captain Dirk";
         }
     }
 

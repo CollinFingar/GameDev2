@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5720b5c674e99e642ad471905364b16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Calebonna
+  planetName: O'Malley's Orb
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
@@ -4295,9 +4295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5720b5c674e99e642ad471905364b16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Just... Mark
-  planetInfo: This will eventually show a detailed description about this planet including
-    it's leader, resources, and current faction affiliation.
+  planetName: ArrPeeAye
+  planetInfo: '"Welcome to our planet of scholars. For those worthy of paying the
+    glorious tax, opportunities are abundant to serve the Empire.  We are open to
+    trading metal that is left-over from building top-of-the-line tech, as well as
+    element zero."\n\n-The Honorable'
   button1String: Do this Action
   button2String: Do THIS Action
   mainCamera: {fileID: 1832652081}
@@ -7084,7 +7086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5720b5c674e99e642ad471905364b16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Collino
+  planetName: Enterpronia
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
