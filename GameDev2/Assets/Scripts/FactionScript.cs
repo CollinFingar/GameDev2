@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Linq;
-
+using System;
 
 public struct Supply{
 	public int priority;
@@ -47,21 +47,25 @@ public class FactionScript : MonoBehaviour {
 	public void createContracts() {
 		
 		for (int i = 0; i < supplies.Length; i++) {
-			supplies [i].priority = Random.Range (1, 5);
+			supplies [i].priority = UnityEngine.Random.Range (1, 5);
 		}
 
-		//Random supply for now
-		//Need to figure out how to sort supplies by priority
-		int index;
+        //Random supply for now
+        //Need to figure out how to sort supplies by priority
+
+        Array.Sort(supplies, (x, y) => y.priority.CompareTo(x.priority));
+        //supplies.OrderByDescending(x => x.priority);
+
+        //int index;
 
 		for (int i = 0; i < 3; i++) {
 			GameObject temp = (GameObject)Instantiate (contract, new Vector3 ((faction - 1) * 14.9f + -7.45f, i * -2.5f + -6.5f, -1), Quaternion.identity);
 			temp.GetComponent<ContractScript> ().Faction = faction;
 
-			index = Random.Range (0, 5);
+			//index = UnityEngine.Random.Range (0, 5);
 
-			temp.GetComponent<ContractScript> ().supply = supplies [index].type;
-			temp.GetComponent<ContractScript> ().max = supplies [index].priority;
+			temp.GetComponent<ContractScript> ().supply = supplies [i].type;
+			temp.GetComponent<ContractScript> ().max = supplies [i].priority;
 
 			contracts [i] = temp;
 		}
