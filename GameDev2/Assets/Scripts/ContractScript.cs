@@ -34,6 +34,7 @@ public class ContractScript : MonoBehaviour {
 		{
 			moveContract ();
 		}
+		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString();
 	}
 
 	void moveContract()
@@ -97,15 +98,15 @@ public class ContractScript : MonoBehaviour {
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
-    void OnMouseDown()
+    void OnMouseUp()
     {
-        //================
-        //Do Whatever Here
-        //================
 		if (complete == false) {
-			
+			filled += 1;
+			if (filled == max) {
+				complete = true;
+				SetCompletedColor ();
+			}
 		}
-        
     }
 
 
