@@ -134,6 +134,12 @@ public class ContractScript : MonoBehaviour {
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
+	public void cycleFinished(){
+		if (filled > 0) {
+			player.GetComponent<PlayerScript> ().money += reward * filled;
+		}
+	}
+
     void OnMouseUp()
     {
 		if (complete == false) {
