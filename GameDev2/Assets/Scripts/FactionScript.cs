@@ -6,14 +6,14 @@ using System;
 
 public struct Supply{
 	public int priority;
-	public int quantity;
+	public float quantity;
 	public string type;
 }
 
 public class FactionScript : MonoBehaviour {
     public int faction = 0;
     public float money = 0;
-	public int power = 0;
+	public float power = 0.0f;
 	public Text armorText;
 	public Text gunsText;
 	public Text explosivesText;
@@ -31,7 +31,7 @@ public class FactionScript : MonoBehaviour {
 		for (int i = 0; i < supplies.Length; i++) {
 			supplies [i].type = supplyTypes [i];
 			supplies [i].priority = i + 1;
-			supplies [i].quantity = 0;
+			supplies [i].quantity = 0.0f;
 		}
 	}
 	
@@ -45,6 +45,8 @@ public class FactionScript : MonoBehaviour {
             } else if (supplies[i].type == "Ships") {
                 shipsText.text = "Ships: " + supplies[i].quantity.ToString();
             }
+
+			power = (float)((supplies [0].quantity + supplies [4].quantity) * Math.Sqrt (supplies [1].quantity * Math.Sqrt (supplies [3].quantity)));
         }
 		
 		//gunsText.text = "Guns: " + supplies [1].quantity.ToString ();

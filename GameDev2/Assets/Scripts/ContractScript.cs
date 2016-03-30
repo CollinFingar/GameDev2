@@ -95,10 +95,11 @@ public class ContractScript : MonoBehaviour {
 			moveTime--;
 
 			if(giveMoney){
-				player.GetComponent<PlayerScript> ().money += reward;
-                GiveFactionResources();
+				if(filled > 0){
+					player.GetComponent<PlayerScript> ().money += reward * filled;
+	                GiveFactionResources();
+				}
 				giveMoney = false;
-
 			}
 
 
