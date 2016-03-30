@@ -113,35 +113,13 @@ public class ContractScript : MonoBehaviour {
 
     void GiveFactionResources() {
         FactionScript fs = faction.GetComponent<FactionScript>();
-        if (supply == "Robots")
-        {
-            fs.supplies[0].quantity += filled;
+        for (int i = 0; i < fs.supplies.Length; i++) {
+            if (supply == fs.supplies[i].type)
+            {
+                fs.supplies[i].quantity += filled;
+            }
         }
 
-        if (supply == "Guns")
-        {
-            fs.supplies[1].quantity += filled;
-        }
-
-        if (supply == "Ships")
-        {
-            fs.supplies[2].quantity += filled;
-        }
-
-        if (supply == "Shields")
-        {
-            fs.supplies[3].quantity += filled;
-        }
-
-        if (supply == "Ammo")
-        {
-            fs.supplies[4].quantity += filled;
-        }
-
-        if (supply == "Fuel")
-        {
-            fs.supplies[5].quantity += filled;
-        }
     }
 
     void OnMouseEnter()

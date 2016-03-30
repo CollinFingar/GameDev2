@@ -37,10 +37,19 @@ public class FactionScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		armorText.text = "Armor: " + supplies [3].quantity.ToString ();
-		gunsText.text = "Guns: " + supplies [1].quantity.ToString ();
+        for (int i = 0; i < supplies.Length; i++) {
+            if (supplies[i].type == "Shields") {
+                armorText.text = "Shields: " + supplies[i].quantity.ToString();
+            } else if (supplies[i].type == "Guns") {
+                gunsText.text = "Guns: " + supplies[i].quantity.ToString();
+            } else if (supplies[i].type == "Ships") {
+                shipsText.text = "Ships: " + supplies[i].quantity.ToString();
+            }
+        }
+		
+		//gunsText.text = "Guns: " + supplies [1].quantity.ToString ();
 		explosivesText.text = "Explosives: 100";
-		shipsText.text = "Ships: " + supplies [4].quantity.ToString ();
+		//shipsText.text = "Ships: " + supplies [4].quantity.ToString ();
         
 	}
 
