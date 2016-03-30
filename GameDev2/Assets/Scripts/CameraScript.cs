@@ -27,6 +27,10 @@ public class CameraScript : MonoBehaviour {
     public GameObject timer;
     public TimerScript tScript;
 
+    public AudioSource soundSource;
+    public AudioClip zoomInSound;
+    public AudioClip zoomOutSound;
+
 	// Use this for initialization
 	void Start () {
         canvas.gameObject.SetActive(false);
@@ -52,6 +56,7 @@ public class CameraScript : MonoBehaviour {
         currentMovingTime = startTime;
         movingIn = true;
         interfaceCanvas.gameObject.SetActive(false);
+        playZoomInSound();
     }
     void updateMoveIn(){
         float distCovered = (Time.time - startTime) * speed;
@@ -74,6 +79,7 @@ public class CameraScript : MonoBehaviour {
         currentMovingTime = startTime;
         movingOut = true;
         canvas.gameObject.SetActive(false);
+        playZoomOutSound();
     }
     void updateMoveOut(){
         float distCovered = (Time.time - startTime) * speed;
@@ -87,4 +93,17 @@ public class CameraScript : MonoBehaviour {
             interfaceCanvas.gameObject.SetActive(true);
         }
     }
+
+
+    public void playZoomInSound()
+    {
+        soundSource.PlayOneShot(zoomInSound, 1F);
+    }
+
+    public void playZoomOutSound()
+    {
+        soundSource.PlayOneShot(zoomOutSound, 1F);
+    }
+
+
 }
