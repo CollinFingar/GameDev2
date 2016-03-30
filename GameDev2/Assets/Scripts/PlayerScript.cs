@@ -14,10 +14,18 @@ public class PlayerScript : MonoBehaviour {
     public Text BText;
     public Text CText;
 
+    public Text AIncomeText;
+    public Text BIncomeText;
+    public Text CIncomeText;
+
     private GameObject planetViewing;
 
     public Button planetB1;
     public Button planetB2;
+
+    public int metalIncome = 0;
+    public int fuelIncome = 0;
+    public int plasmaIncome = 0; 
 
     // Use this for initialization
     void Start () {
@@ -33,6 +41,9 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
+        AIncomeText.text = "+ " + metalIncome;
+        BIncomeText.text = "+ " + fuelIncome;
+        CIncomeText.text = "+ " + plasmaIncome;
     }
 
     public void assignPlanet(GameObject p) {

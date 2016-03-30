@@ -112,6 +112,7 @@ public class PlanetScript : MonoBehaviour {
                 mine.Add(mineNumberIterations);
                 mine.Add(b1RewardType);
                 int rewaredAmount = (int)(b1Reward * mineNumberResourceIncrease / mineNumberIterations);
+                increasePSIncome(b1RewardType, rewaredAmount);
                 mine.Add(rewaredAmount);
                 mines.Add(mine);
             }
@@ -149,6 +150,7 @@ public class PlanetScript : MonoBehaviour {
                 mine.Add(mineNumberIterations);
                 mine.Add(b2RewardType);
                 int rewaredAmount = (int)(b2Reward * mineNumberResourceIncrease / mineNumberIterations);
+                increasePSIncome(b2RewardType, rewaredAmount);
                 mine.Add(rewaredAmount);
                 mines.Add(mine);
             }
@@ -185,6 +187,7 @@ public class PlanetScript : MonoBehaviour {
 
             if (numIterations == 0)
             {
+                decreasePSIncome(resourceType, resourceAmount);
                 mines.RemoveAt(i);
             }
             else {
@@ -214,6 +217,26 @@ public class PlanetScript : MonoBehaviour {
     {
         AudioSource audio = GetComponent<AudioSource>();
         audio.PlayOneShot(build, 0.7F);
+    }
+
+    public void increasePSIncome(string rewardType, int reward) {
+        if (rewardType == "Metal") {
+            ps.metalIncome += reward;
+        } else if (rewardType == "Fuel") {
+            ps.fuelIncome += reward;
+        } else if (rewardType == "Plasma") {
+            ps.plasmaIncome += reward;
+        }
+    }
+
+    public void decreasePSIncome(string rewardType, int reward) {
+        if (rewardType == "Metal") {
+            ps.metalIncome -= reward;
+        } else if (rewardType == "Fuel") {
+            ps.fuelIncome -= reward;
+        } else if (rewardType == "Plasma") {
+            ps.plasmaIncome -= reward;
+        }
     }
 
 }
