@@ -36,13 +36,16 @@ public class PlanetScript : MonoBehaviour {
 
     public bool movedIn = false;
 
-    public ParticleSystem blueParticleSystem;
-    public ParticleSystem greenParticleSystem;
-    public ParticleSystem redParticleSystem;
+    public GameObject blueParticle;
+    public GameObject greenParticle;
+    public GameObject redParticle;
 
     public int mineNumberIterations = 5;
     public float mineNumberResourceIncrease = 1.5f;
     public float mineNumberMoneyIncrease = 1.5f;
+
+    public AudioClip buy;
+    public AudioClip build; 
 
     private ArrayList mines = new ArrayList();
         //Arraylist of arraylists
@@ -58,10 +61,7 @@ public class PlanetScript : MonoBehaviour {
     void Start () {
         cs = mainCamera.GetComponent<CameraScript>();
         ps = player.GetComponent<PlayerScript>();
-
-        blueParticleSystem.enableEmission = false;
-        greenParticleSystem.enableEmission = false;
-        redParticleSystem.enableEmission = false;
+        
 
         setPlanetInfo();
     }
@@ -101,10 +101,12 @@ public class PlanetScript : MonoBehaviour {
             if (ps.money >= b1Cost) {
                 ps.money -= b1Cost;
                 ps.increaseResource(b1RewardType, b1Reward);
-                spawnResource("B");
+                //spawnResource("B");
+                playBuySound();
             }
         } else {
             if (ps.money >= b1Cost) {
+                playBuildSound();
                 ps.money -= b1Cost;
                 ArrayList mine = new ArrayList();
                 mine.Add(mineNumberIterations);
@@ -121,7 +123,7 @@ public class PlanetScript : MonoBehaviour {
     {
         Debug.Log("Doing B2 action for " + planetName);
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
             longTerm = true;
         } else {
             longTerm = false;
@@ -133,13 +135,15 @@ public class PlanetScript : MonoBehaviour {
             {
                 ps.money -= b2Cost;
                 ps.increaseResource(b2RewardType, b2Reward);
-                spawnResource("B");
+                //spawnResource("B");
+                playBuySound();
             }
         }
         else
         {
             if (ps.money >= b2Cost)
             {
+                playBuildSound();
                 ps.money -= b2Cost;
                 ArrayList mine = new ArrayList();
                 mine.Add(mineNumberIterations);
@@ -151,8 +155,20 @@ public class PlanetScript : MonoBehaviour {
         }
     }
 
-    public void spawnResource(string b2RewardType) {
-        blueParticleSystem.enableEmission = true;
+    public void spawnResource(string RewardType) {
+        if (RewardType == "Metal") {
+            Instantiate(blueParticle, new Vector3(transform.position.x,
+                                      transform.position.y,
+                                      -1), Quaternion.identity);
+        } else if(RewardType == "Plasma") {
+            Instantiate(greenParticle, new Vector3(transform.position.x,
+                                     transform.position.y,
+                                     -1), Quaternion.identity);
+        } else if(RewardType == "Fuel") {
+            Instantiate(redParticle, new Vector3(transform.position.x,
+                                     transform.position.y,
+                                     -1), Quaternion.identity);
+        }
 
         //instance.transform.position = gameObject.transform.position;
     }
@@ -165,6 +181,7 @@ public class PlanetScript : MonoBehaviour {
             int resourceAmount = (int)mine[2];
             ps.increaseResource(resourceType, resourceAmount);
 
+            spawnResource(resourceType);
 
             if (numIterations == 0)
             {
@@ -186,6 +203,17 @@ public class PlanetScript : MonoBehaviour {
         } else if(planetName == "Enterpronia") {
             planetInfo = "\"Greetings, I am so glad you beamed down here. Our phasers are never set to stun in this hostile area.\n\nI spoke with Spook, and we have a surplus of metal and plasma, if trading was on your mind.\"\n\n-Captain Dirk";
         }
+    }
+
+    public void playBuySound() {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.PlayOneShot(buy, 0.7F);
+    }
+
+    public void playBuildSound()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.PlayOneShot(build, 0.7F);
     }
 
 }
