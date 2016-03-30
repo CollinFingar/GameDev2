@@ -27,6 +27,7 @@ public class ContractScript : MonoBehaviour {
 	//######################################################################//
 
 	public GameObject player;
+	public bool giveMoney = true;
 
 	// Use this for initialization
 	void Start () {
@@ -91,6 +92,12 @@ public class ContractScript : MonoBehaviour {
 			this.transform.position = new Vector3(newX,this.transform.position.y,this.transform.position.z);
 			moveTime--;
 
+			if(giveMoney){
+				player.GetComponent<PlayerScript> ().money += reward;
+				giveMoney = false;
+			}
+
+
 			if (moveTime == 0) 
 			{
 				Debug.Log ("Goodbye World!");
@@ -133,12 +140,6 @@ public class ContractScript : MonoBehaviour {
         //===============================
         GetComponent<SpriteRenderer>().color = Color.white;
     }
-
-	public void cycleFinished(){
-		if (filled > 0) {
-			player.GetComponent<PlayerScript> ().money += reward * filled;
-		}
-	}
 
     void OnMouseUp()
     {

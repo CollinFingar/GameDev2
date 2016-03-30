@@ -95,7 +95,5 @@ public class TimerScript : MonoBehaviour {
             PlanetScript ps = planets[i].GetComponent<PlanetScript>();
             ps.contractsFinish();
         }
-
-		contract.GetComponent<ContractScript> ().cycleFinished ();
     }
 }
