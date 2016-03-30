@@ -29,6 +29,8 @@ public class ContractScript : MonoBehaviour {
 	public GameObject player;
 	public bool giveMoney = true;
 
+    public GameObject faction;
+
 	// Use this for initialization
 	void Start () {
 
@@ -94,7 +96,9 @@ public class ContractScript : MonoBehaviour {
 
 			if(giveMoney){
 				player.GetComponent<PlayerScript> ().money += reward;
+                GiveFactionResources();
 				giveMoney = false;
+
 			}
 
 
@@ -106,6 +110,39 @@ public class ContractScript : MonoBehaviour {
 
 		}
 	}
+
+    void GiveFactionResources() {
+        FactionScript fs = faction.GetComponent<FactionScript>();
+        if (supply == "Robots")
+        {
+            fs.supplies[0].quantity += filled;
+        }
+
+        if (supply == "Guns")
+        {
+            fs.supplies[1].quantity += filled;
+        }
+
+        if (supply == "Ships")
+        {
+            fs.supplies[2].quantity += filled;
+        }
+
+        if (supply == "Shields")
+        {
+            fs.supplies[3].quantity += filled;
+        }
+
+        if (supply == "Ammo")
+        {
+            fs.supplies[4].quantity += filled;
+        }
+
+        if (supply == "Fuel")
+        {
+            fs.supplies[5].quantity += filled;
+        }
+    }
 
     void OnMouseEnter()
     {

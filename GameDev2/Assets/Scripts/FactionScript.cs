@@ -22,7 +22,7 @@ public class FactionScript : MonoBehaviour {
 	GameObject[] contracts = new GameObject[3];
 	public GameObject contract;
 
-	Supply[] supplies = new Supply[6];
+	public Supply[] supplies = new Supply[6];
 	string[] supplyTypes = {"Robots", "Guns", "Ammo",
 		"Shields", "Ships", "Fuel"};
 
@@ -41,7 +41,7 @@ public class FactionScript : MonoBehaviour {
 		gunsText.text = "Guns: " + supplies [1].quantity.ToString ();
 		explosivesText.text = "Explosives: 100";
 		shipsText.text = "Ships: " + supplies [4].quantity.ToString ();
-
+        
 	}
 
 	public void createContracts() {
@@ -62,9 +62,9 @@ public class FactionScript : MonoBehaviour {
 			GameObject temp = (GameObject)Instantiate (contract, new Vector3 ((faction - 1) * 14.9f + -7.45f, i * -2.5f + -6.5f, -1), Quaternion.identity);
 			temp.GetComponent<ContractScript> ().Faction = faction;
 
-			//index = UnityEngine.Random.Range (0, 5);
-
-			temp.GetComponent<ContractScript> ().supply = supplies [i].type;
+            //index = UnityEngine.Random.Range (0, 5);
+            temp.GetComponent<ContractScript>().faction = this.gameObject;
+            temp.GetComponent<ContractScript> ().supply = supplies [i].type;
 			temp.GetComponent<ContractScript> ().max = supplies [i].priority;
 			temp.GetComponent<ContractScript> ().reward = supplies [i].priority * 10;
 

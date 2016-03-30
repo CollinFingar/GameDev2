@@ -789,6 +789,8 @@ MonoBehaviour:
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
+  giveMoney: 1
+  faction: {fileID: 0}
 --- !u!212 &156315373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1125,6 +1127,8 @@ MonoBehaviour:
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
+  giveMoney: 1
+  faction: {fileID: 0}
 --- !u!212 &293404184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1227,6 +1231,18 @@ Prefab:
       propertyPath: CIncomeText
       value: 
       objectReference: {fileID: 1248074539}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: resourceMetal
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: resourceFuel
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: resourcePlasma
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51559b1f78ec87642ab385816156c033, type: 2}
   m_IsPrefabParent: 0
@@ -2394,6 +2410,8 @@ MonoBehaviour:
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
+  giveMoney: 1
+  faction: {fileID: 0}
 --- !u!212 &844646441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4218,6 +4236,8 @@ MonoBehaviour:
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
+  giveMoney: 1
+  faction: {fileID: 0}
 --- !u!212 &1237225274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6029,6 +6049,8 @@ MonoBehaviour:
   moveTime: 0
   moveType: 0
   player: {fileID: 0}
+  giveMoney: 1
+  faction: {fileID: 0}
 --- !u!212 &1749183483
 SpriteRenderer:
   m_ObjectHideFlags: 0
