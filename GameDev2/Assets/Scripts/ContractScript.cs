@@ -36,35 +36,45 @@ public class ContractScript : MonoBehaviour {
 
 		if (supply == "Robots") {
 			metalCost = 5;
+			desc = this.gameObject.GetComponentInChildren<Text> ();
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal";
 		}
 
 		if (supply == "Guns") {
 			metalCost = 3;
 			plasmaCost = 2;
+			desc = this.gameObject.GetComponentInChildren<Text> ();
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal "+plasmaCost.ToString()+" Plasma";
 		}
 
 		if (supply == "Ships") {
 			fuelCost = 5;
 			metalCost = 5;
+			desc = this.gameObject.GetComponentInChildren<Text> ();
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal "+fuelCost.ToString()+" Fuel";
 		}
 
 		if (supply == "Shields") {
 			fuelCost = 5;
 			plasmaCost = 3;
+			desc = this.gameObject.GetComponentInChildren<Text> ();
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+fuelCost.ToString()+" Fuel "+plasmaCost.ToString()+" Plasma";
 		}
 
 		if (supply == "Ammo") {
 			metalCost = 2;
+			desc = this.gameObject.GetComponentInChildren<Text> ();
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal";
 		}
 
 		if (supply == "Fuel") {
 			fuelCost = 5;
+			desc = this.gameObject.GetComponentInChildren<Text> ();
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString();
 		}
 
 
 		player = GameObject.FindGameObjectWithTag ("Player");
-		desc = this.gameObject.GetComponentInChildren<Text> ();
-		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString();
 	}
 	
 	// Update is called once per frame
@@ -73,7 +83,30 @@ public class ContractScript : MonoBehaviour {
 		{
 			moveContract ();
 		}
-		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString();
+		
+		if (supply == "Robots") {
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal";
+		}
+
+		if (supply == "Guns") {
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal\n"+plasmaCost.ToString()+" Plasma";
+		}
+
+		if (supply == "Ships") {
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal\n"+fuelCost.ToString()+" Fuel";
+		}
+
+		if (supply == "Shields") {
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+fuelCost.ToString()+" Fuel\n"+plasmaCost.ToString()+" Plasma";
+		}
+
+		if (supply == "Ammo") {
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal";
+		}
+
+		if (supply == "Fuel") {
+			desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString();
+		}
 	}
 
 	void moveContract()
