@@ -13,6 +13,8 @@ public class WarScript : MonoBehaviour {
     public float farRightX = 6f;
     public float farLeftX = -6f;
 
+    public GameObject[] planets = new GameObject[6];
+
 	// Use this for initialization
 	void Start () {
 	
