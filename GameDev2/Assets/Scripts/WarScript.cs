@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WarScript : MonoBehaviour {
     public GameObject Faction1;
@@ -18,6 +19,9 @@ public class WarScript : MonoBehaviour {
     public GameObject[] planets = new GameObject[6];
     private bool warOnPlanet = false;
 
+    public int deaths = 0;
+    public Text deathCounter;
+
 	// Use this for initialization
 	void Start () {
         wcs = collider.GetComponent<WarColliderScript>();
@@ -25,6 +29,10 @@ public class WarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        deaths += Random.Range(80, 140);
+        deathCounter.text = "DEATHS: " + deaths.ToString();
+
+
         warOnPlanet = wcs.onPlanet;
         if (warOnPlanet) {
             //Do ground war thing here
