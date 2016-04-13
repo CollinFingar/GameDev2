@@ -52,12 +52,17 @@ public class PlanetScript : MonoBehaviour {
             //0 = num iterations left
             //1 = resource type to give
             //2 = resource amount to give
+            //3 = which action made this
     public bool onlyOneMine = true;
     private bool b1Mine = false;
     private bool b2Mine = false;
 
     public GameObject leftNeighbor;
     public GameObject rightNeighbor;
+
+    public bool metalMine = false;
+    public bool plasmaMine = false;
+    public bool fuelMine = false;
 
 
     // Use this for initialization
@@ -108,7 +113,7 @@ public class PlanetScript : MonoBehaviour {
                 playBuySound();
             }
         } else {
-            if (ps.money >= b1Cost) {
+            if (ps.money >= b1Cost && !b1Mine) {
                 playBuildSound();
                 ps.money -= b1Cost;
                 ArrayList mine = new ArrayList();
@@ -117,7 +122,10 @@ public class PlanetScript : MonoBehaviour {
                 int rewaredAmount = (int)(b1Reward * mineNumberResourceIncrease / mineNumberIterations);
                 increasePSIncome(b1RewardType, rewaredAmount);
                 mine.Add(rewaredAmount);
+                mine.Add(1);
+                b1Mine = true;
                 mines.Add(mine);
+                updateSymbols(b1RewardType, true);
             }
         }
 
@@ -145,7 +153,7 @@ public class PlanetScript : MonoBehaviour {
         }
         else
         {
-            if (ps.money >= b2Cost)
+            if (ps.money >= b2Cost && !b2Mine)
             {
                 playBuildSound();
                 ps.money -= b2Cost;
@@ -155,7 +163,10 @@ public class PlanetScript : MonoBehaviour {
                 int rewaredAmount = (int)(b2Reward * mineNumberResourceIncrease / mineNumberIterations);
                 increasePSIncome(b2RewardType, rewaredAmount);
                 mine.Add(rewaredAmount);
+                mine.Add(2);
+                b2Mine = true;
                 mines.Add(mine);
+                updateSymbols(b2RewardType, true);
             }
         }
     }
@@ -190,6 +201,12 @@ public class PlanetScript : MonoBehaviour {
 
             if (numIterations == 0)
             {
+                if ((int)mine[3] == 1) {
+                    b1Mine = false;
+                } else {
+                    b2Mine = false;
+                }
+                updateSymbols(resourceType, false);
                 decreasePSIncome(resourceType, resourceAmount);
                 mines.RemoveAt(i);
             }
@@ -239,6 +256,26 @@ public class PlanetScript : MonoBehaviour {
             ps.fuelIncome -= reward;
         } else if (rewardType == "Plasma") {
             ps.plasmaIncome -= reward;
+        }
+    }
+
+    public void updateSymbols(string type, bool building) {
+        if (building) {
+            if (type == "Metal") {
+                metalMine = true;
+            } else if(type == "Plasma") {
+                plasmaMine = true;
+            } else if(type == "Fuel") {
+                fuelMine = true;
+            }
+        } else {
+            if (type == "Metal") {
+                metalMine = false;
+            } else if(type == "Plasma") {
+                plasmaMine = false;
+            } else if(type == "Fuel") {
+                fuelMine = false;
+            }
         }
     }
 
