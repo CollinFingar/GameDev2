@@ -2906,6 +2906,8 @@ MonoBehaviour:
   - {fileID: 493339804}
   - {fileID: 885047566}
   - {fileID: 1410560522}
+  deaths: 0
+  deathCounter: {fileID: 1686960413}
 --- !u!4 &840782919
 Transform:
   m_ObjectHideFlags: 0
