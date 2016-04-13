@@ -87,7 +87,6 @@ public class TimerScript : MonoBehaviour {
     void updateSprite()
     {
         sprite.GetComponent<SpriteRenderer>().sprite = sprites[currentSpriteNum];
-        Debug.Log("updating sprite: " + currentSpriteNum);
     }
 
     void sendFinishToPlanets() {

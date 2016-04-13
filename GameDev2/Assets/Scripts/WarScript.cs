@@ -13,11 +13,12 @@ public class WarScript : MonoBehaviour {
     public float farRightX = 6f;
     public float farLeftX = -6f;
 
+    public GameObject collider;
     public GameObject[] planets = new GameObject[6];
 
 	// Use this for initialization
 	void Start () {
-	
+        
 	}
 	
 	// Update is called once per frame
@@ -43,5 +44,11 @@ public class WarScript : MonoBehaviour {
 		}
 
         colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
-	}
+        collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
+    }
+
+    void OnTriggerEnter2DChild(Collision2D coll) {
+        PlanetScript ps = coll.gameObject.GetComponent<PlanetScript>();
+        Debug.Log(coll.gameObject.name);
+    }
 }
