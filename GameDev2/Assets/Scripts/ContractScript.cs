@@ -138,7 +138,6 @@ public class ContractScript : MonoBehaviour {
 
 			if (moveTime == 0) 
 			{
-				Debug.Log ("Goodbye World!");
 				Destroy (this.gameObject);
 			}
 
