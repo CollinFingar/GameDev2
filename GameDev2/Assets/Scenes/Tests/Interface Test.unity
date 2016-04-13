@@ -1595,6 +1595,8 @@ MonoBehaviour:
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
+  leftNeighbor: {fileID: 1314148453}
+  rightNeighbor: {fileID: 2128300335}
 --- !u!61 &464856308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1907,6 +1909,8 @@ MonoBehaviour:
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
+  leftNeighbor: {fileID: 2128300335}
+  rightNeighbor: {fileID: 885047566}
 --- !u!61 &493339808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2721,6 +2725,8 @@ MonoBehaviour:
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
+  leftNeighbor: {fileID: 493339804}
+  rightNeighbor: {fileID: 1410560522}
 --- !u!212 &885047570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4591,6 +4597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3d68deaa0e1d84789e42697b1d542b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlanetName: 
+  onPlanet: 0
 --- !u!50 &1265462059
 Rigidbody2D:
   serializedVersion: 2
@@ -4798,7 +4806,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824590211}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!114 &1314148456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4841,6 +4849,8 @@ MonoBehaviour:
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
+  leftNeighbor: {fileID: 0}
+  rightNeighbor: {fileID: 464856304}
 --- !u!61 &1314148457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5226,6 +5236,8 @@ MonoBehaviour:
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
+  leftNeighbor: {fileID: 885047566}
+  rightNeighbor: {fileID: 0}
 --- !u!212 &1410560526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6541,9 +6553,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2128300337}
-  - {fileID: 464856306}
   - {fileID: 1314148455}
+  - {fileID: 464856306}
+  - {fileID: 2128300337}
   - {fileID: 493339806}
   - {fileID: 885047567}
   - {fileID: 1410560523}
@@ -7948,7 +7960,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824590211}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!114 &2128300338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7989,6 +8001,8 @@ MonoBehaviour:
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
+  leftNeighbor: {fileID: 464856304}
+  rightNeighbor: {fileID: 493339804}
 --- !u!61 &2128300339
 BoxCollider2D:
   m_ObjectHideFlags: 0

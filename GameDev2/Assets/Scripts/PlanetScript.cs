@@ -56,6 +56,9 @@ public class PlanetScript : MonoBehaviour {
     private bool b1Mine = false;
     private bool b2Mine = false;
 
+    public GameObject leftNeighbor;
+    public GameObject rightNeighbor;
+
 
     // Use this for initialization
     void Start () {
