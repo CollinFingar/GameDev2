@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WarColliderScript : MonoBehaviour {
 
+    public GameObject currentPlanet;
     public string currentPlanetName;
     public bool onPlanet = false;
 
@@ -26,7 +27,8 @@ public class WarColliderScript : MonoBehaviour {
     }
 
     void OnTriggerStay2D(Collider2D coll) {
-        //Debug.Log(coll.gameObject.GetComponent<PlanetScript>().planetName);
+        currentPlanet = coll.gameObject;
         currentPlanetName = coll.gameObject.GetComponent<PlanetScript>().planetName;
+        Debug.Log(currentPlanetName);
     }
 }
