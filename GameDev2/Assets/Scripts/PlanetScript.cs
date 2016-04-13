@@ -64,6 +64,10 @@ public class PlanetScript : MonoBehaviour {
     public bool plasmaMine = false;
     public bool fuelMine = false;
 
+	public GameObject spr_mM;
+	public GameObject spr_pM;
+	public GameObject spr_fM;
+
 
     // Use this for initialization
     void Start () {
@@ -262,19 +266,25 @@ public class PlanetScript : MonoBehaviour {
     public void updateSymbols(string type, bool building) {
         if (building) {
             if (type == "Metal") {
-                metalMine = true;
+				metalMine = true;	
+				spr_mM.SetActive (true);
             } else if(type == "Plasma") {
                 plasmaMine = true;
+				spr_pM.SetActive (true);
             } else if(type == "Fuel") {
                 fuelMine = true;
+				spr_fM.SetActive (true);
             }
         } else {
             if (type == "Metal") {
                 metalMine = false;
+				spr_mM.SetActive (false);
             } else if(type == "Plasma") {
                 plasmaMine = false;
+				spr_pM.SetActive (false);
             } else if(type == "Fuel") {
                 fuelMine = false;
+				spr_fM.SetActive (false);
             }
         }
     }
