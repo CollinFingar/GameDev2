@@ -13,7 +13,9 @@ public struct Supply{
 public class FactionScript : MonoBehaviour {
     public int faction = 0;
     public float money = 0;
-	public float power = 0.0f;
+	public int humans = 0;
+	public float groundPower = 0.0f;
+	public float spacePower = 0.0f;
 	public Text armorText;
 	public Text gunsText;
 	public Text explosivesText;
@@ -31,7 +33,7 @@ public class FactionScript : MonoBehaviour {
 		for (int i = 0; i < supplies.Length; i++) {
 			supplies [i].type = supplyTypes [i];
 			supplies [i].priority = i + 1;
-			supplies [i].quantity = 0.0f;
+			supplies [i].quantity = 1.0f;
 		}
 	}
 	
@@ -46,7 +48,8 @@ public class FactionScript : MonoBehaviour {
                 shipsText.text = "Ships: " + supplies[i].quantity.ToString();
             }
 
-			power = (float)((supplies [0].quantity + supplies [4].quantity) * Math.Sqrt (supplies [1].quantity * Math.Sqrt (supplies [3].quantity)));
+			groundPower = ((supplies[1].quantity * Mathf.Sqrt(supplies[2].quantity)) / (supplies[0].quantity + humans)) * (humans + (supplies[0].quantity/3.0f));
+			spacePower = ((supplies[4].quantity * Mathf.Sqrt(supplies[5].quantity)) / (supplies[0].quantity + humans)) * (humans + (supplies[0].quantity/3.0f));
         }
 		
 		//gunsText.text = "Guns: " + supplies [1].quantity.ToString ();

@@ -36,12 +36,15 @@ public class WarScript : MonoBehaviour {
         warOnPlanet = wcs.onPlanet;
         if (warOnPlanet) {
             //Do ground war thing here
+			F1power = Faction1.GetComponent<FactionScript> ().groundPower;
+			F2power = Faction2.GetComponent<FactionScript> ().groundPower;
         } else {
             //Do space war here
+			F1power = Faction1.GetComponent<FactionScript> ().spacePower;
+			F2power = Faction2.GetComponent<FactionScript> ().spacePower;
         }
 
-		F1power = Faction1.GetComponent<FactionScript> ().power;
-		F2power = Faction2.GetComponent<FactionScript> ().power;
+
 
 		if(F1power > F2power){
 			F1power = F1power - Faction2.GetComponent<FactionScript> ().supplies[3].quantity;
