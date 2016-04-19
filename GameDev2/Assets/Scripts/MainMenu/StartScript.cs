@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour {
 
@@ -14,6 +15,10 @@ public class StartScript : MonoBehaviour {
 	}
 
     void OnMouseDown() {
-        Application.LoadLevel(1);
+        StartTheShow();
+    }
+
+    public void StartTheShow() {
+        SceneManager.LoadScene(1);
     }
 }
