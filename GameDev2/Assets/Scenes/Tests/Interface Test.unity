@@ -1185,6 +1185,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205898074}
+--- !u!1 &233333237 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 165576, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
+  m_PrefabInternal: {fileID: 2129353615}
 --- !u!1 &244131113
 GameObject:
   m_ObjectHideFlags: 0
@@ -5439,6 +5443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3d68deaa0e1d84789e42697b1d542b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlanet: {fileID: 493339804}
+  spaceLasers: {fileID: 233333237}
   currentPlanetName: 
   onPlanet: 0
 --- !u!50 &1265462059
