@@ -51,7 +51,7 @@ public class WarScript : MonoBehaviour {
 			if (F1power < 0) {
 				warStatus += 0;
 			} else {
-				warStatus += F1power * 0.00001f;
+				warStatus += F1power * 0.0001f;
 			}
 
 		}else{
@@ -59,7 +59,7 @@ public class WarScript : MonoBehaviour {
 			if (F2power < 0) {
 				warStatus += 0;
 			} else {
-				warStatus -= F2power * 0.00001f;
+				warStatus -= F2power * 0.0001f;
 			}
 		}
 
