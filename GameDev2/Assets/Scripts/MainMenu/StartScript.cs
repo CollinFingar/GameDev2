@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour {
 
+    public int sceneNum = 1;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,6 +21,6 @@ public class StartScript : MonoBehaviour {
     }
 
     public void StartTheShow() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneNum);
     }
 }
