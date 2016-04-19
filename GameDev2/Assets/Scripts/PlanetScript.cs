@@ -85,15 +85,28 @@ public class PlanetScript : MonoBehaviour {
 
     void OnMouseDown() {
         if (!movedIn) {
+			
+			if(b2RewardType == "NA"){
+				b2.gameObject.SetActive(false);
+			}
+			
+			if(b1RewardType == "NA"){
+				b1.gameObject.SetActive(false);
+			}			
+			
             cs.moveIn(gameObject);
             movedIn = true;
             planetNameTextObject.text = planetName;
             planetInfoTextObject.text = planetInfo;
-            b1.GetComponentInChildren<Text>().text = b1Cost.ToString() + " Money -> " + b1Reward.ToString() + " " + b1RewardType;
+            b1.GetComponentInChildren<Text>().text = b1Cost.ToString() + " Money -> " + b1Reward.ToString() + " " + b1RewardType;			
             b2.GetComponentInChildren<Text>().text = b2Cost.ToString() + " Money -> " + b2Reward.ToString() + " " + b2RewardType;
             ps.assignPlanet(gameObject);
             publicLeaderImage.sprite = spriteLeader;
         } else {
+			
+			b1.gameObject.SetActive(true);
+			b2.gameObject.SetActive(true);
+			
             cs.moveOut();
             movedIn = false;
         }
