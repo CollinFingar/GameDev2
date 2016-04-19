@@ -1276,7 +1276,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 1
   money: 0
-  power: 0
+  humans: 0
+  groundPower: 0
+  spacePower: 0
   armorText: {fileID: 605451932}
   gunsText: {fileID: 1239742299}
   explosivesText: {fileID: 2105040449}
@@ -1872,11 +1874,11 @@ MonoBehaviour:
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
   b1Cost: 10
-  b1Reward: 10
-  b1RewardType: Metal
+  b1Reward: 1
+  b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: FIGHT
+  b2RewardType: NA
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
@@ -2034,7 +2036,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 2
   money: 0
-  power: 0
+  humans: 0
+  groundPower: 0
+  spacePower: 0
   armorText: {fileID: 905905464}
   gunsText: {fileID: 1762926683}
   explosivesText: {fileID: 1975852787}
@@ -2194,12 +2198,12 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
-  b1Reward: 10
-  b1RewardType: Metal
+  b1Cost: 20
+  b1Reward: 1
+  b1RewardType: Plasma
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: C
+  b2RewardType: NA
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
@@ -3254,11 +3258,11 @@ MonoBehaviour:
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
   b1Cost: 10
-  b1Reward: 10
-  b1RewardType: A
+  b1Reward: 1
+  b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: C
+  b2RewardType: NA
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
@@ -5679,12 +5683,12 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
-  b1Reward: 10
+  b1Cost: 5
+  b1Reward: 1
   b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: Plasma
+  b2RewardType: NA
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
@@ -6075,12 +6079,12 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
-  b1Reward: 10
-  b1RewardType: A
+  b1Cost: 5
+  b1Reward: 1
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: C
+  b2RewardType: NA
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
@@ -9159,12 +9163,12 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
-  b1Reward: 10
-  b1RewardType: Metal
+  b1Cost: 20
+  b1Reward: 1
+  b1RewardType: Plasma
   b2Cost: 10
   b2Reward: 10
-  b2RewardType: Fuel
+  b2RewardType: NA
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
