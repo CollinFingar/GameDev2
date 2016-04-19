@@ -21,22 +21,24 @@ public class WarColliderScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (pData.rightNeighbor != null && transform.position.x > currentPlanet.transform.position.x) 
-		{ //assigns the next set of planets to use for lerping between
-			currentPlanet = pData.rightNeighbor;
-			pData = currentPlanet.GetComponent<PlanetScript> ();
-			pos1 = pData.leftNeighbor.transform.position;
-			pos2 = currentPlanet.transform.position;
+		if (spaceLasers.activeSelf && onPlanet) 
+		{
+			spaceLasers.SetActive (false);
 		} 
-		else {
-			if (pData.leftNeighbor != null && transform.position.x < pData.leftNeighbor.transform.position.x) 
+		else if (!onPlanet && !spaceLasers.activeSelf) 
+		{
+			spaceLasers.SetActive (true);
+		}
+		if (transform.position.x > currentPlanet.transform.position.x && pData.rightNeighbor != null) 
+		{ //assigns the next set of planets to use for lerping between
+			pos1 = currentPlanet.transform.position;
+			pos2 = pData.rightNeighbor.transform.position;
+		} 
+		else if (transform.position.x < currentPlanet.transform.position.x && pData.leftNeighbor != null)
 			{
-				currentPlanet = pData.leftNeighbor;
-				pData = currentPlanet.GetComponent<PlanetScript> ();
 				pos1 = pData.leftNeighbor.transform.position;
 				pos2 = currentPlanet.transform.position;
 			}
-		}
 		factorA = (transform.position.x - pos1.x) / (pos2.x - pos1.x);
 		spaceLasers.transform.position = new Vector3 (transform.position.x, Mathf.Lerp (pos1.y, pos2.y, factorA),-1.0f);
 	}
@@ -52,6 +54,7 @@ public class WarColliderScript : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D coll) {
         currentPlanet = coll.gameObject;
+		pData = currentPlanet.GetComponent<PlanetScript> ();
         currentPlanetName = coll.gameObject.GetComponent<PlanetScript>().planetName;
         Debug.Log(currentPlanetName);
     }
