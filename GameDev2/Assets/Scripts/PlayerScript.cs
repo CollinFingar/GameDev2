@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.IO;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -23,6 +24,9 @@ public class PlayerScript : MonoBehaviour {
     public Text BIncomeText;
     public Text CIncomeText;
 
+	public Text Faction1Name;
+	public Text Faction2Name;
+
     private GameObject planetViewing;
 
     public Button planetB1;
@@ -37,7 +41,9 @@ public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //Screen.SetResolution(100, 80, true);
+		StreamReader sr = new StreamReader ("Assets/Resources/Names.txt");
+		Faction1Name.text = sr.ReadLine ();
+		Faction2Name.text = sr.ReadLine ();
 	}
 	
 	// Update is called once per frame

@@ -439,6 +439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 4900000, guid: 5627697af61e9bc48add1449409ac969, type: 3}
+  if1: {fileID: 1027739344}
+  if2: {fileID: 1103262360}
   sceneNum: 3
 --- !u!4 &899417316
 Transform:
