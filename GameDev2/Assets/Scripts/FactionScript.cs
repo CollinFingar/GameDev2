@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using Random=UnityEngine.Random;
 
 public struct Supply{
 	public string type;
@@ -39,22 +40,30 @@ public class FactionScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {   
+	void Update () {  
+		power = 0;
+		for(int i = 0; i < supplies.Length; i++){
+			power += supplies[i].quantity * supplies[i].power;
+		}
 	}
 
 	public void createContracts() {
 
+		int index = 0;
+		
 		for (int i = 0; i < 3; i++) {
 			GameObject temp = (GameObject)Instantiate (contract, new Vector3 ((faction - 1) * 14.9f + -7.45f, i * -2.5f + -6.5f, -1), Quaternion.identity);
 			temp.GetComponent<ContractScript> ().Faction = faction;
             temp.GetComponent<ContractScript>().faction = this.gameObject;
             
+			index = Random.Range(0,supplies.Length);
 			
 			//Rework these values
-			temp.GetComponent<ContractScript> ().supply = "Blasters";
-			temp.GetComponent<ContractScript> ().metalCost = 2;
-			temp.GetComponent<ContractScript> ().fuelCost = 2;
-			temp.GetComponent<ContractScript> ().plasmaCost = 2;
+			temp.GetComponent<ContractScript> ().supply = supplies[index].type;
+			temp.GetComponent<ContractScript> ().metalCost = supplies[index].cost[0];
+			temp.GetComponent<ContractScript> ().fuelCost = supplies[index].cost[1];
+			temp.GetComponent<ContractScript> ().plasmaCost = supplies[index].cost[2];
+			
 			temp.GetComponent<ContractScript> ().max = 5;
 			temp.GetComponent<ContractScript> ().reward = 100;
 

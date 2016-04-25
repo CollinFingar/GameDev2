@@ -35,7 +35,7 @@ public class ContractScript : MonoBehaviour {
 	void Start () {
 		
 		desc = this.gameObject.GetComponentInChildren<Text> ();
-		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal";
+		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n";
 
 
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -48,7 +48,19 @@ public class ContractScript : MonoBehaviour {
 			moveContract ();
 		}
 		
-		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n"+metalCost.ToString()+" Metal";
+		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n";
+		
+		if(metalCost>0){
+			desc.text += metalCost.ToString()+" Metal\n";
+		}
+		
+		if(fuelCost>0){
+			desc.text += fuelCost.ToString()+" Fuel\n";
+		}
+		
+		if(plasmaCost>0){
+			desc.text += plasmaCost.ToString()+" Plasma\n";
+		}
 	}
 
 	void moveContract()
