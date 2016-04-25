@@ -1275,10 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 1
-  money: 0
-  humans: 0
-  groundPower: 0
-  spacePower: 0
+  power: 0
   armorText: {fileID: 605451932}
   gunsText: {fileID: 1239742299}
   explosivesText: {fileID: 2105040449}
@@ -1481,6 +1478,14 @@ Prefab:
       propertyPath: resourcePlasma
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: Faction1Name
+      value: 
+      objectReference: {fileID: 1079911607}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: Faction2Name
+      value: 
+      objectReference: {fileID: 541519487}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51559b1f78ec87642ab385816156c033, type: 2}
   m_IsPrefabParent: 0
@@ -2035,10 +2040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 2
-  money: 0
-  humans: 0
-  groundPower: 0
-  spacePower: 0
+  power: 0
   armorText: {fileID: 905905464}
   gunsText: {fileID: 1762926683}
   explosivesText: {fileID: 1975852787}
