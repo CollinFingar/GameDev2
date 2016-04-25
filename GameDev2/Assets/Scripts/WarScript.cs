@@ -32,36 +32,10 @@ public class WarScript : MonoBehaviour {
         deaths += Random.Range(80, 140);
         deathCounter.text = "DEATHS: " + deaths.ToString();
 
+		F1power = Faction1.GetComponent<FactionScript> ().power;
+		F2power = Faction2.GetComponent<FactionScript> ().power;
 
-        warOnPlanet = wcs.onPlanet;
-        if (warOnPlanet) {
-            //Do ground war thing here
-			F1power = Faction1.GetComponent<FactionScript> ().groundPower;
-			F2power = Faction2.GetComponent<FactionScript> ().groundPower;
-        } else {
-            //Do space war here
-			F1power = Faction1.GetComponent<FactionScript> ().spacePower;
-			F2power = Faction2.GetComponent<FactionScript> ().spacePower;
-        }
-
-
-
-		if(F1power > F2power){
-			F1power = F1power - Faction2.GetComponent<FactionScript> ().supplies[3].quantity;
-			if (F1power < 0) {
-				warStatus += 0;
-			} else {
-				warStatus += F1power * 0.00001f;
-			}
-
-		}else{
-			F2power = F2power - Faction1.GetComponent<FactionScript> ().supplies[3].quantity;
-			if (F2power < 0) {
-				warStatus += 0;
-			} else {
-				warStatus -= F2power * 0.00001f;
-			}
-		}
+		//NEW WAR ALGORITHM HERE//
 
         colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
         collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
