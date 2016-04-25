@@ -67,6 +67,7 @@ public class TimerScript : MonoBehaviour {
         float time = Time.time;
         if(time >= timerEnd)
         {
+			DoRandomEvent ();
 			GameObject.Find ("Faction1").GetComponent<FactionScript> ().destroyContracts ();
 			GameObject.Find ("Faction2").GetComponent<FactionScript> ().destroyContracts ();
             inProgress = false;
@@ -95,4 +96,10 @@ public class TimerScript : MonoBehaviour {
             ps.contractsFinish();
         }
     }
+
+	void DoRandomEvent(){
+		paused = true;
+
+		paused = false;
+	}
 }
