@@ -72,7 +72,7 @@ public class PlanetScript : MonoBehaviour {
 	public Text popText;
 	public long population = 5000000000;
 	private long displayedPopulation = 0;
-	public int popDisplayTick = 50;
+	public int popDisplayTick = 5000;
 
 
     // Use this for initialization
