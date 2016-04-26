@@ -29,6 +29,8 @@ public class TimerScript : MonoBehaviour {
 
 	public RandomEventScript rs;
 
+	private int latestEventNum = 0;
+
 	// Use this for initialization
 	void Start () {
 		startTimer(timerLength);
@@ -108,7 +110,22 @@ public class TimerScript : MonoBehaviour {
 
 	void DoRandomEvent(){
 		//compute whether or not to do random event and what type
-		rs.initEvent(0);
+		int r = Random.Range(0,7);
+
+		if (r < 3) {
+			latestEventNum = 0;
+			rs.initEvent(0);
+		} else if (r < 5) {
+			latestEventNum = 1;
+			rs.initEvent(1);
+		} else if (r < 6) {
+			latestEventNum = 2;
+			rs.initEvent(2);
+		} else if (r < 7) {
+			latestEventNum = 3;
+			rs.initEvent(3);
+		}
+
 		paused = true;
 		randomEventOnScreen = true;
 		RandomEventCanvas.gameObject.SetActive (true);
@@ -116,7 +133,7 @@ public class TimerScript : MonoBehaviour {
 	}
 
 	public void RemoveCanvasUnpause(){
-		rs.doEvent(0);
+		rs.doEvent(latestEventNum);
 		paused = false;
 		randomEventOnScreen = false;
 		RandomEventCanvas.gameObject.SetActive (false);

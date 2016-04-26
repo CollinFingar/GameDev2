@@ -39,6 +39,11 @@ public class PlayerScript : MonoBehaviour {
     public int resourceDisplayTick = 1;
     public int moneyDisplayTick = 15;
 
+	private int embargoWeekEnd = 0;
+	private bool embargoWeek = false;
+
+	public TimerScript timer;
+
     // Use this for initialization
     void Start () {
 		StreamReader sr = new StreamReader ("Assets/Resources/Names.txt");
@@ -48,6 +53,12 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (embargoWeek) {
+			if (timer.cycleNum >= embargoWeekEnd) {
+				embargoWeek = false;
+			}
+		}
+
         incrementValues();
 
         moneyText.text = "$: "+ moneyDisplayed.ToString();
@@ -71,12 +82,16 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void doPlanetB1Action() {
-        planetViewing.GetComponent<PlanetScript>().doB1Action();
+		if (!embargoWeek) {
+			planetViewing.GetComponent<PlanetScript>().doB1Action();
+		}
     }
 
     public void doPlanetB2Action()
     {
-        planetViewing.GetComponent<PlanetScript>().doB2Action();
+		if (!embargoWeek) {
+			planetViewing.GetComponent<PlanetScript>().doB2Action();
+		}
     }
 
     public void increaseResource(string type, int amount) {
@@ -157,4 +172,10 @@ public class PlayerScript : MonoBehaviour {
             }
         }
     }
+
+	public void StartEmbargoWeek(){
+		embargoWeek = true;
+		embargoWeekEnd = timer.cycleNum + 1;
+	}
+
 }

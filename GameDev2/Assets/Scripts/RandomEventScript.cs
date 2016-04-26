@@ -24,6 +24,7 @@ public class RandomEventScript : MonoBehaviour {
 	public Event E1;
 
 	public WarScript ws;
+	public PlayerScript ps;
 	
 	// Use this for initialization
 	void Start () {
@@ -104,7 +105,7 @@ public class RandomEventScript : MonoBehaviour {
 			ws.StartPeaceWeek();
 		} else if (num == 3) {
 			//Embargo
-
+			ps.StartEmbargoWeek();
 		}
 		
 	}
