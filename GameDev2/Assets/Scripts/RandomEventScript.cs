@@ -41,7 +41,7 @@ public class RandomEventScript : MonoBehaviour {
 		i++;
 
 		E1.title = "GM Week!";
-		E1.body = " offered an olive branch of peace in recognition of this wonderous week.";
+		E1.body = "There is peace in recognition of this wonderous week.";
 		events[i] = E1;
 		i++;
 
@@ -59,12 +59,17 @@ public class RandomEventScript : MonoBehaviour {
 	public void initEvent(int num){
 		Faction = Random.Range(0,2);
 		title.text = events[num].title;
-		
-		if(Faction == 0){
-			body.text = F1name.text+events[num].body;
-		}else{
-			body.text = F2name.text+events[num].body;
+
+		if (num < 3) {
+			if (Faction == 0) {
+				body.text = F1name.text + events [num].body;
+			} else {
+				body.text = F2name.text + events [num].body;
+			}
+		} else {
+			body.text = events [num].body;
 		}
+
 		
 		
 	}

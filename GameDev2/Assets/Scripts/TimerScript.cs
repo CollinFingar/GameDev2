@@ -110,7 +110,8 @@ public class TimerScript : MonoBehaviour {
 
 	void DoRandomEvent(){
 		//compute whether or not to do random event and what type
-		int r = Random.Range(0,7);
+		//int r = Random.Range(0,7);
+		int r = 0;
 
 		if (r < 3) {
 			latestEventNum = 0;
