@@ -68,6 +68,10 @@ public class PlanetScript : MonoBehaviour {
 	public GameObject spr_pM;
 	public GameObject spr_fM;
 
+	public Text popText;
+	public int population = 5000000000;
+	private int displayedPopulation;
+
 
     // Use this for initialization
     void Start () {

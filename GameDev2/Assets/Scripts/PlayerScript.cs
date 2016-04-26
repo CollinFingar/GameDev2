@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
     public int plasmaIncome = 0;
 
     public int resourceDisplayTick = 1;
-    public int moneyDisplayTick = 10;
+    public int moneyDisplayTick = 15;
 
     // Use this for initialization
     void Start () {
