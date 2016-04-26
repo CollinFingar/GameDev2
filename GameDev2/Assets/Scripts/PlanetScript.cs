@@ -80,7 +80,7 @@ public class PlanetScript : MonoBehaviour {
         cs = mainCamera.GetComponent<CameraScript>();
         ps = player.GetComponent<PlayerScript>();
         
-		//displayedPopulation = population;
+		displayedPopulation = population;
 
         setPlanetInfo();
     }
