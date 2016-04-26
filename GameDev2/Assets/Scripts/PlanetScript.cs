@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class PlanetScript : MonoBehaviour {
 
@@ -69,8 +70,9 @@ public class PlanetScript : MonoBehaviour {
 	public GameObject spr_fM;
 
 	public Text popText;
-	public int population = 5000000000;
-	private int displayedPopulation;
+	public Int64 population = 5000000000;
+	private Int64 displayedPopulation;
+	public popDisplayTick = 50;
 
 
     // Use this for initialization
@@ -78,7 +80,7 @@ public class PlanetScript : MonoBehaviour {
         cs = mainCamera.GetComponent<CameraScript>();
         ps = player.GetComponent<PlayerScript>();
         
-
+		displayedPopulation = population;
         setPlanetInfo();
     }
 	
