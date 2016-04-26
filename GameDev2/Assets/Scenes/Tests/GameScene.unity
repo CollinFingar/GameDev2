@@ -9950,6 +9950,7 @@ MonoBehaviour:
   - {fileID: 885047566}
   - {fileID: 1410560522}
   RandomEventCanvas: {fileID: 582884750}
+  rs: {fileID: 1997221866}
 --- !u!4 &1997221865
 Transform:
   m_ObjectHideFlags: 0
