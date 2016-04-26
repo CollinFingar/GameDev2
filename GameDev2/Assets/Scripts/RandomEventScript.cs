@@ -20,7 +20,7 @@ public class RandomEventScript : MonoBehaviour {
 	public Text F2name;
 	public int Faction;
 	
-	public Event[] events = new Event[1];
+	public Event[] events = new Event[4];
 	public Event E1;
 
 	public WarScript ws;
