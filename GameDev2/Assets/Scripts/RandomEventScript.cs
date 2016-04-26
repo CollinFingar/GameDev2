@@ -60,7 +60,7 @@ public class RandomEventScript : MonoBehaviour {
 		Faction = Random.Range(0,2);
 		title.text = events[num].title;
 
-		if (num < 3) {
+		if (num < 2) {
 			if (Faction == 0) {
 				body.text = F1name.text + events [num].body;
 			} else {
