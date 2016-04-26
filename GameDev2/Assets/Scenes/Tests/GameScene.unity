@@ -2010,9 +2010,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
+  b1Cost: 25
   b1Reward: 1
-  b1RewardType: Fuel
+  b1RewardType: Plasma
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 20
+  b1Cost: 25
   b1Reward: 1
   b1RewardType: Plasma
   b2Cost: 10
@@ -3807,9 +3807,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
+  b1Cost: 5
   b1Reward: 1
-  b1RewardType: Fuel
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
@@ -6984,9 +6984,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 5
+  b1Cost: 10
   b1Reward: 1
-  b1RewardType: Metal
+  b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
@@ -10572,9 +10572,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 20
+  b1Cost: 10
   b1Reward: 1
-  b1RewardType: Plasma
+  b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
