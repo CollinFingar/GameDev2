@@ -5,6 +5,7 @@ public class WarColliderScript : MonoBehaviour {
 
     public GameObject currentPlanet;
 	public GameObject spaceLasers;
+	public GameObject explosions;
     public string currentPlanetName;
     public bool onPlanet = false;
 	PlanetScript pData;
@@ -21,13 +22,17 @@ public class WarColliderScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		explosions.transform.position = currentPlanet.transform.position;
 		if (spaceLasers.activeSelf && onPlanet) 
 		{
 			spaceLasers.SetActive (false);
+			explosions.SetActive (true);
+
 		} 
 		else if (!onPlanet && !spaceLasers.activeSelf) 
 		{
 			spaceLasers.SetActive (true);
+			explosions.SetActive (false);
 		}
 		if (transform.position.x > currentPlanet.transform.position.x && pData.rightNeighbor != null) 
 		{ //assigns the next set of planets to use for lerping between
