@@ -12,6 +12,7 @@ public class TimerScript : MonoBehaviour {
     public bool inProgress = false;
 
     public bool paused = false;
+	public bool randomEventOnScreen = false;
 
     public Sprite[] sprites = new Sprite[8];
 
@@ -20,6 +21,8 @@ public class TimerScript : MonoBehaviour {
 	public GameObject contract;
 
     public GameObject[] planets = new GameObject[6];
+
+	public Canvas RandomEventCanvas;
 
 	// Use this for initialization
 	void Start () {
@@ -98,8 +101,17 @@ public class TimerScript : MonoBehaviour {
     }
 
 	void DoRandomEvent(){
-		paused = true;
+		//compute whether or not to do random event and what type
 
+
+		paused = true;
+		randomEventOnScreen = true;
+		RandomEventCanvas.gameObject.SetActive (true);
+	}
+
+	public void RemoveCanvasUnpause(){
 		paused = false;
+		randomEventOnScreen = false;
+		RandomEventCanvas.gameObject.SetActive (false);
 	}
 }
