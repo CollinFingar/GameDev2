@@ -24,6 +24,9 @@ public class WarScript : MonoBehaviour {
 
 	public TimerScript timer;
 
+	private int peaceWeekEnd = 0;
+	private bool peaceWeek = false;
+
 	// Use this for initialization
 	void Start () {
         wcs = collider.GetComponent<WarColliderScript>();
@@ -61,7 +64,14 @@ public class WarScript : MonoBehaviour {
 			colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 			collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 		}
+
     }
+
+
+	public void StartPeaceWeek(){
+		peaceWeek = true;
+		peaceWeekEnd = timer.cycleNum + 1;
+	}
 
     
 }
