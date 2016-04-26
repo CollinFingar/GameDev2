@@ -8,7 +8,7 @@ public class WarColliderScript : MonoBehaviour {
 	public GameObject explosions;
     public string currentPlanetName;
     public bool onPlanet = false;
-	PlanetScript pData;
+	public PlanetScript pData;
 	Vector3 pos1;
 	Vector3 pos2;
 	public float factorA; 

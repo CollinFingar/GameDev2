@@ -19,7 +19,7 @@ public class WarScript : MonoBehaviour {
     public GameObject[] planets = new GameObject[6];
     private bool warOnPlanet = false;
 
-    public int deaths = 0;
+    public long deaths = 0;
     public Text deathCounter;
 
 	public TimerScript timer;
@@ -32,8 +32,18 @@ public class WarScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!timer.randomEventOnScreen) {
-		
-			deaths += Random.Range(80, 140);
+			if (wcs.onPlanet && wcs.pData.population > 5000) {
+				long r = Random.Range (3000, 5000);
+
+				deaths += r;
+				wcs.pData.population -= r;
+				Debug.Log (wcs.pData.planetName);
+			} else if (wcs.onPlanet && wcs.pData.population <= 5000) {
+				long r = wcs.pData.population;
+				deaths += r;
+				wcs.pData.population = (long)0;
+			}
+				
 			deathCounter.text = "DEATHS: " + deaths.ToString();
 
 			F1power = (float)Faction1.GetComponent<FactionScript> ().power;
@@ -45,7 +55,7 @@ public class WarScript : MonoBehaviour {
 			//NEW WAR ALGORITHM HERE//
 
 			if(F1power - F2power != 0){
-				warStatus += (F1power - F2power) * 0.000001f;
+				warStatus += (F1power - F2power) * 0.0000001f;
 			}
 
 			colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);

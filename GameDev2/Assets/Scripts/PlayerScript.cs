@@ -63,7 +63,11 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void assignPlanet(GameObject p) {
+		if (planetViewing != null) {
+			planetViewing.GetComponent<PlanetScript> ().selected = false;
+		}
         planetViewing = p;
+		planetViewing.GetComponent<PlanetScript> ().selected = true;
     }
 
     public void doPlanetB1Action() {

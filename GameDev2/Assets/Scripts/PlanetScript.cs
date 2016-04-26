@@ -74,6 +74,7 @@ public class PlanetScript : MonoBehaviour {
 	private long displayedPopulation = 0;
 	public int popDisplayTick = 5000;
 
+	public bool selected = false;
 
     // Use this for initialization
     void Start () {
@@ -88,7 +89,9 @@ public class PlanetScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		UpdatePopText ();
-		popText.text = "Pop: " + displayedPopulation.ToString ();
+		if (selected) {
+			popText.text = "Pop: " + displayedPopulation.ToString ();
+		}
 	}
 
     void OnMouseDown() {

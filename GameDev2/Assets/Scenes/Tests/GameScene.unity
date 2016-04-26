@@ -2040,8 +2040,9 @@ MonoBehaviour:
   spr_pM: {fileID: 1508081492}
   spr_fM: {fileID: 1179498693}
   popText: {fileID: 172084941}
-  population: 5000000000
-  popDisplayTick: 50
+  population: 500000000
+  popDisplayTick: 3500
+  selected: 0
 --- !u!61 &464856308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2433,8 +2434,9 @@ MonoBehaviour:
   spr_pM: {fileID: 244131113}
   spr_fM: {fileID: 57552141}
   popText: {fileID: 172084941}
-  population: 5000000000
-  popDisplayTick: 50
+  population: 400000000
+  popDisplayTick: 3500
+  selected: 0
 --- !u!61 &493339808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3362,6 +3364,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 885047567}
   m_RootOrder: 1
+--- !u!1001 &797171661
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1265462056}
+    m_Modifications:
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19837558, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 177704, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &840782917
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,8 +3889,9 @@ MonoBehaviour:
   spr_pM: {fileID: 721744659}
   spr_fM: {fileID: 1510008751}
   popText: {fileID: 172084941}
-  population: 5000000000
-  popDisplayTick: 50
+  population: 100000000
+  popDisplayTick: 3500
+  selected: 0
 --- !u!212 &885047570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5063,7 +5116,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5441177, g: 0.5441177, b: 0.5441177, a: 1}
     m_PressedColor: {r: 0.8897059, g: 0.8897059, b: 0.8897059, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6321,6 +6374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2070905092}
+  - {fileID: 1272682585}
   m_Father: {fileID: 840782919}
   m_RootOrder: 1
 --- !u!61 &1265462057
@@ -6350,8 +6404,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlanet: {fileID: 493339804}
   spaceLasers: {fileID: 233333237}
+  explosions: {fileID: 1272682584}
   currentPlanetName: 
   onPlanet: 0
+  pData: {fileID: 0}
   factorA: 0
 --- !u!50 &1265462059
 Rigidbody2D:
@@ -6399,6 +6455,14 @@ Transform:
   - {fileID: 1534764948}
   m_Father: {fileID: 840782919}
   m_RootOrder: 0
+--- !u!1 &1272682584 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 177704, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+  m_PrefabInternal: {fileID: 797171661}
+--- !u!4 &1272682585 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 482416, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+  m_PrefabInternal: {fileID: 797171661}
 --- !u!1001 &1282672886
 Prefab:
   m_ObjectHideFlags: 0
@@ -6615,8 +6679,9 @@ MonoBehaviour:
   spr_pM: {fileID: 184249664}
   spr_fM: {fileID: 167796560}
   popText: {fileID: 172084941}
-  population: 5000000000
-  popDisplayTick: 50
+  population: 800000000
+  popDisplayTick: 3500
+  selected: 0
 --- !u!61 &1314148457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7014,8 +7079,9 @@ MonoBehaviour:
   spr_pM: {fileID: 1529174550}
   spr_fM: {fileID: 1209753707}
   popText: {fileID: 172084941}
-  population: 5000000000
-  popDisplayTick: 50
+  population: 1000000000
+  popDisplayTick: 3500
+  selected: 0
 --- !u!212 &1410560526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9970,7 +10036,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5147059, g: 0.5147059, b: 0.5147059, a: 1}
     m_PressedColor: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10618,8 +10684,9 @@ MonoBehaviour:
   spr_pM: {fileID: 1139985282}
   spr_fM: {fileID: 615586488}
   popText: {fileID: 172084941}
-  population: 5000000000
-  popDisplayTick: 50
+  population: 1000000000
+  popDisplayTick: 3500
+  selected: 0
 --- !u!61 &2128300339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10762,6 +10829,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412268, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19804938, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
+      propertyPath: prewarm
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
