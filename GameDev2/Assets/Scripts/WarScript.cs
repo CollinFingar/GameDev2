@@ -23,6 +23,7 @@ public class WarScript : MonoBehaviour {
     public Text deathCounter;
 
 	public TimerScript timer;
+	public bool isZoomed = false;
 
 	private int peaceWeekEnd = 0;
 	private bool peaceWeek = false;
@@ -58,9 +59,12 @@ public class WarScript : MonoBehaviour {
 			//NEW WAR ALGORITHM HERE//
 
 			if(F1power - F2power != 0){
-				warStatus += (F1power - F2power) * 0.0000001f;
+				if(!isZoomed){
+					warStatus += (F1power - F2power) * 0.0000001f;
+				}
 			}
 
+			
 			colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 			collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 		}

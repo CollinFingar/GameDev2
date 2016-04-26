@@ -3460,6 +3460,7 @@ MonoBehaviour:
   deaths: 0
   deathCounter: {fileID: 1686960413}
   timer: {fileID: 1997221864}
+  isZoomed: 0
 --- !u!4 &840782919
 Transform:
   m_ObjectHideFlags: 0
@@ -9134,6 +9135,7 @@ MonoBehaviour:
   zoomedInPostion: {x: 0, y: 0, z: -10}
   zoomedOutScale: 5
   zoomedInScale: 1
+  isZoomed: 0
   speed: 3.5
   moveTime: 0.5
   mainCameraScript: {fileID: 1832652081}
@@ -9143,6 +9145,8 @@ MonoBehaviour:
   interfaceCanvas: {fileID: 1834697750}
   timer: {fileID: 1997221863}
   tScript: {fileID: 0}
+  war: {fileID: 840782917}
+  wsc: {fileID: 840782918}
   soundSource: {fileID: 1832652085}
   zoomInSound: {fileID: 8300000, guid: 74e273c944c812548beece6e326e6927, type: 3}
   zoomOutSound: {fileID: 8300000, guid: b2a9dff53ee882c4188ab45367e37112, type: 3}

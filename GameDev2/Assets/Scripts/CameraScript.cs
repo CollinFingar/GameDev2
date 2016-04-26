@@ -10,6 +10,7 @@ public class CameraScript : MonoBehaviour {
 
     private bool movingIn = false;
     private bool movingOut = false;
+	public bool isZoomed = false;
     public float speed = .1f;
 
     private float startTime = 0f;
@@ -26,6 +27,8 @@ public class CameraScript : MonoBehaviour {
 
     public GameObject timer;
     public TimerScript tScript;
+	public GameObject war;
+	public WarScript wsc;
 
     public AudioSource soundSource;
     public AudioClip zoomInSound;
@@ -35,6 +38,7 @@ public class CameraScript : MonoBehaviour {
 	void Start () {
         canvas.gameObject.SetActive(false);
         tScript = timer.GetComponent<TimerScript>();
+		wsc = war.GetComponent<WarScript>();
 	}
 	
 	// Update is called once per frame
@@ -48,6 +52,7 @@ public class CameraScript : MonoBehaviour {
 
     public void moveIn(GameObject location){
         tScript.paused = true;
+		wsc.isZoomed = true;
         zoomedInPostion = new Vector3(location.transform.position.x + 1,
                                        location.transform.position.y,
                                        -10);
@@ -73,6 +78,7 @@ public class CameraScript : MonoBehaviour {
 
     public void moveOut(){
         tScript.paused = false;
+		wsc.isZoomed = false;
         //mainCameraScript.orthographicSize = zoomedOutScale;
         mainInterface.SetActive(true);
         startTime = Time.time;
