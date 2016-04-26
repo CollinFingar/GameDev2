@@ -44,7 +44,7 @@ public class RandomEventScript : MonoBehaviour {
 		if(Faction == 0){
 			body.text = F1name.text+events[num].body;
 		}else{
-			body.text = F1name.text+events[num].body;
+			body.text = F2name.text+events[num].body;
 		}
 		
 		

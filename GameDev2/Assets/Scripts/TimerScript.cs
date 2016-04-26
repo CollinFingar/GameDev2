@@ -27,6 +27,8 @@ public class TimerScript : MonoBehaviour {
 
 	public Canvas RandomEventCanvas;
 
+	public RandomEventScript rs;
+
 	// Use this for initialization
 	void Start () {
 		startTimer(timerLength);
@@ -106,7 +108,7 @@ public class TimerScript : MonoBehaviour {
 
 	void DoRandomEvent(){
 		//compute whether or not to do random event and what type
-		this.GetComponentInParent<RandomEventScript> ().initEvent(0);
+		rs.initEvent(0);
 		paused = true;
 		randomEventOnScreen = true;
 		RandomEventCanvas.gameObject.SetActive (true);
@@ -114,7 +116,7 @@ public class TimerScript : MonoBehaviour {
 	}
 
 	public void RemoveCanvasUnpause(){
-		this.GetComponentInParent<RandomEventScript> ().doEvent(0);
+		rs.doEvent(0);
 		paused = false;
 		randomEventOnScreen = false;
 		RandomEventCanvas.gameObject.SetActive (false);
