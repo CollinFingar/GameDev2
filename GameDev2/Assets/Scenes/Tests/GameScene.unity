@@ -9908,6 +9908,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48135fa1ce467d648b55a3d6ad164c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  title: {fileID: 1454806009}
+  body: {fileID: 1068643679}
+  F1: {fileID: 278379905}
+  F2: {fileID: 466273937}
 --- !u!1 &2019365313
 GameObject:
   m_ObjectHideFlags: 0

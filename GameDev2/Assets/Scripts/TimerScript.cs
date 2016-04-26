@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using System.IO;
 
 public class TimerScript : MonoBehaviour {
 
@@ -104,14 +106,15 @@ public class TimerScript : MonoBehaviour {
 
 	void DoRandomEvent(){
 		//compute whether or not to do random event and what type
-
-
+		this.GetComponentInParent<RandomEventScript> ().initEvent(0);
 		paused = true;
 		randomEventOnScreen = true;
 		RandomEventCanvas.gameObject.SetActive (true);
+		
 	}
 
 	public void RemoveCanvasUnpause(){
+		this.GetComponentInParent<RandomEventScript> ().doEvent(0);
 		paused = false;
 		randomEventOnScreen = false;
 		RandomEventCanvas.gameObject.SetActive (false);
