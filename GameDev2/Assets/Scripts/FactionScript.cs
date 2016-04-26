@@ -23,7 +23,8 @@ public class FactionScript : MonoBehaviour {
 
 	GameObject[] contracts = new GameObject[3];
 	public GameObject contract;
-
+	public GameObject timer;
+	
 	public Supply[] supplies = new Supply[6];
 	string[] supplyTypes = {"Ammo", "Fuel", "Robots", "Plasma", "Blasters", "Artillery", "Ships"};
 	int[,] supplyCosts = {{10,0,0}, {0,10,0}, {20,10,0}, {0,0,10}, {20,0,10}, {20,10,10}, {25,20,10}};
@@ -68,7 +69,7 @@ public class FactionScript : MonoBehaviour {
 			temp.GetComponent<ContractScript> ().plasmaCost = supplies[index].cost[2];
 			temp.GetComponent<ContractScript> ().reward = supplies[index].reward;
 			
-			temp.GetComponent<ContractScript> ().max = 5;
+			temp.GetComponent<ContractScript> ().max = (int)Math.Round((float)timer.GetComponent<TimerScript> ().cycleNum / 3.0f) + Random.Range(1,3);
 			
 
 			contracts [i] = temp;

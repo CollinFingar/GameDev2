@@ -8,6 +8,7 @@ public class TimerScript : MonoBehaviour {
     public float timerEnd = 0;
     public float updateSpriteTime = 0;
     public int currentSpriteNum = 0;
+	public int cycleNum = 0;
 
     public bool inProgress = false;
 
@@ -70,6 +71,7 @@ public class TimerScript : MonoBehaviour {
         float time = Time.time;
         if(time >= timerEnd)
         {
+			cycleNum += 1;
 			DoRandomEvent ();
 			GameObject.Find ("Faction1").GetComponent<FactionScript> ().destroyContracts ();
 			GameObject.Find ("Faction2").GetComponent<FactionScript> ().destroyContracts ();

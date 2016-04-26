@@ -1412,6 +1412,7 @@ MonoBehaviour:
   explosivesText: {fileID: 2105040449}
   shipsText: {fileID: 1419837653}
   contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
+  timer: {fileID: 1997221863}
 --- !u!4 &278379907
 Transform:
   m_ObjectHideFlags: 0
@@ -2038,6 +2039,9 @@ MonoBehaviour:
   spr_mM: {fileID: 1211674854}
   spr_pM: {fileID: 1508081492}
   spr_fM: {fileID: 1179498693}
+  popText: {fileID: 0}
+  population: 5000000000
+  popDisplayTick: 50
 --- !u!61 &464856308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2177,6 +2181,7 @@ MonoBehaviour:
   explosivesText: {fileID: 1975852787}
   shipsText: {fileID: 35160525}
   contract: {fileID: 129912, guid: f1f8c6acf7a6f3b44bbc9152c895de9c, type: 2}
+  timer: {fileID: 1997221863}
 --- !u!4 &466273939
 Transform:
   m_ObjectHideFlags: 0
@@ -2427,6 +2432,9 @@ MonoBehaviour:
   spr_mM: {fileID: 340666907}
   spr_pM: {fileID: 244131113}
   spr_fM: {fileID: 57552141}
+  popText: {fileID: 0}
+  population: 5000000000
+  popDisplayTick: 50
 --- !u!61 &493339808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3828,6 +3836,9 @@ MonoBehaviour:
   spr_mM: {fileID: 948946464}
   spr_pM: {fileID: 721744659}
   spr_fM: {fileID: 1510008751}
+  popText: {fileID: 0}
+  population: 5000000000
+  popDisplayTick: 50
 --- !u!212 &885047570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6603,6 +6614,9 @@ MonoBehaviour:
   spr_mM: {fileID: 636212282}
   spr_pM: {fileID: 184249664}
   spr_fM: {fileID: 167796560}
+  popText: {fileID: 0}
+  population: 5000000000
+  popDisplayTick: 50
 --- !u!61 &1314148457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6999,6 +7013,9 @@ MonoBehaviour:
   spr_mM: {fileID: 569282265}
   spr_pM: {fileID: 1529174550}
   spr_fM: {fileID: 1209753707}
+  popText: {fileID: 0}
+  population: 5000000000
+  popDisplayTick: 50
 --- !u!212 &1410560526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9842,6 +9859,7 @@ MonoBehaviour:
   timerEnd: 0
   updateSpriteTime: 0
   currentSpriteNum: 0
+  cycleNum: 0
   inProgress: 0
   paused: 0
   randomEventOnScreen: 0
@@ -10583,6 +10601,9 @@ MonoBehaviour:
   spr_mM: {fileID: 1455775078}
   spr_pM: {fileID: 1139985282}
   spr_fM: {fileID: 615586488}
+  popText: {fileID: 0}
+  population: 5000000000
+  popDisplayTick: 50
 --- !u!61 &2128300339
 BoxCollider2D:
   m_ObjectHideFlags: 0
