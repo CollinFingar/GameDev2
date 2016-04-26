@@ -35,7 +35,7 @@ public class WarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!timer.randomEventOnScreen) {
+		if (!timer.randomEventOnScreen && !isZoomed && !peaceWeek) {
 			if (wcs.onPlanet && wcs.pData.population > 5000) {
 				long r = Random.Range (3000, 5000);
 
@@ -59,9 +59,9 @@ public class WarScript : MonoBehaviour {
 			//NEW WAR ALGORITHM HERE//
 
 			if(F1power - F2power != 0){
-				if(!isZoomed){
-					warStatus += (F1power - F2power) * 0.0000001f;
-				}
+
+				warStatus += (F1power - F2power) * 0.0000001f;
+				
 			}
 
 			

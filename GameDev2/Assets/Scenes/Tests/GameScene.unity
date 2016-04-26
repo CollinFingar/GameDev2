@@ -1618,6 +1618,10 @@ Prefab:
       propertyPath: Faction2Name
       value: 
       objectReference: {fileID: 541519487}
+    - target: {fileID: 11487652, guid: 51559b1f78ec87642ab385816156c033, type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1997221864}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51559b1f78ec87642ab385816156c033, type: 2}
   m_IsPrefabParent: 0
@@ -2041,7 +2045,7 @@ MonoBehaviour:
   spr_fM: {fileID: 1179498693}
   popText: {fileID: 172084941}
   population: 500000000
-  popDisplayTick: 3500
+  popDisplayTick: 1000
   selected: 0
 --- !u!61 &464856308
 BoxCollider2D:
@@ -2435,7 +2439,7 @@ MonoBehaviour:
   spr_fM: {fileID: 57552141}
   popText: {fileID: 172084941}
   population: 400000000
-  popDisplayTick: 3500
+  popDisplayTick: 1000
   selected: 0
 --- !u!61 &493339808
 BoxCollider2D:
@@ -3891,7 +3895,7 @@ MonoBehaviour:
   spr_fM: {fileID: 1510008751}
   popText: {fileID: 172084941}
   population: 100000000
-  popDisplayTick: 3500
+  popDisplayTick: 1000
   selected: 0
 --- !u!212 &885047570
 SpriteRenderer:
@@ -6681,7 +6685,7 @@ MonoBehaviour:
   spr_fM: {fileID: 167796560}
   popText: {fileID: 172084941}
   population: 800000000
-  popDisplayTick: 3500
+  popDisplayTick: 1000
   selected: 0
 --- !u!61 &1314148457
 BoxCollider2D:
@@ -7081,7 +7085,7 @@ MonoBehaviour:
   spr_fM: {fileID: 1209753707}
   popText: {fileID: 172084941}
   population: 1000000000
-  popDisplayTick: 3500
+  popDisplayTick: 1000
   selected: 0
 --- !u!212 &1410560526
 SpriteRenderer:
@@ -9163,7 +9167,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -9987,6 +9991,7 @@ MonoBehaviour:
   F2name: {fileID: 541519487}
   Faction: 0
   ws: {fileID: 840782918}
+  ps: {fileID: 843346283}
 --- !u!1 &2019365313
 GameObject:
   m_ObjectHideFlags: 0
@@ -10694,7 +10699,7 @@ MonoBehaviour:
   spr_fM: {fileID: 615586488}
   popText: {fileID: 172084941}
   population: 1000000000
-  popDisplayTick: 3500
+  popDisplayTick: 1000
   selected: 0
 --- !u!61 &2128300339
 BoxCollider2D:
