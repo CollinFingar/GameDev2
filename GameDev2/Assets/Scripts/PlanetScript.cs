@@ -70,8 +70,8 @@ public class PlanetScript : MonoBehaviour {
 	public GameObject spr_fM;
 
 	public Text popText;
-	public Int64 population = 5000000000;
-	private Int64 displayedPopulation;
+	public long population = 5000000000;
+	private long displayedPopulation = 0;
 	public int popDisplayTick = 50;
 
 
@@ -80,13 +80,15 @@ public class PlanetScript : MonoBehaviour {
         cs = mainCamera.GetComponent<CameraScript>();
         ps = player.GetComponent<PlayerScript>();
         
-		displayedPopulation = population;
+		//displayedPopulation = population;
+
         setPlanetInfo();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        
+		UpdatePopText ();
+		popText.text = "Pop: " + displayedPopulation.ToString ();
 	}
 
     void OnMouseDown() {
@@ -307,5 +309,19 @@ public class PlanetScript : MonoBehaviour {
             }
         }
     }
+
+	void UpdatePopText(){
+		if (population != displayedPopulation) {
+			if (Mathf.Abs (displayedPopulation - population) <= popDisplayTick) {
+				displayedPopulation = population;
+			} else if (displayedPopulation < population) {
+				displayedPopulation += popDisplayTick;
+			} else {
+				displayedPopulation -= popDisplayTick;
+			}
+
+		}
+
+	}
 
 }
