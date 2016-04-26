@@ -64,7 +64,9 @@ public class WarScript : MonoBehaviour {
 			colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 			collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 		}
-
+		if (peaceWeek && timer.cycleNum >= peaceWeekEnd) {
+			peaceWeek = false;
+		}
     }
 
 
