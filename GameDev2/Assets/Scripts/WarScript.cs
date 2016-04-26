@@ -22,6 +22,8 @@ public class WarScript : MonoBehaviour {
     public int deaths = 0;
     public Text deathCounter;
 
+	public TimerScript timer;
+
 	// Use this for initialization
 	void Start () {
         wcs = collider.GetComponent<WarColliderScript>();
@@ -29,23 +31,26 @@ public class WarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        deaths += Random.Range(80, 140);
-        deathCounter.text = "DEATHS: " + deaths.ToString();
-
-		F1power = (float)Faction1.GetComponent<FactionScript> ().power;
-		F2power = (float)Faction2.GetComponent<FactionScript> ().power;
+		if (!timer.randomEventOnScreen) {
 		
-		Debug.Log(F1power);
-		Debug.Log(F2power);
+			deaths += Random.Range(80, 140);
+			deathCounter.text = "DEATHS: " + deaths.ToString();
 
-		//NEW WAR ALGORITHM HERE//
-		
-		if(F1power - F2power != 0){
-			warStatus += (F1power - F2power) * 0.000001f;
+			F1power = (float)Faction1.GetComponent<FactionScript> ().power;
+			F2power = (float)Faction2.GetComponent<FactionScript> ().power;
+
+			Debug.Log(F1power);
+			Debug.Log(F2power);
+
+			//NEW WAR ALGORITHM HERE//
+
+			if(F1power - F2power != 0){
+				warStatus += (F1power - F2power) * 0.000001f;
+			}
+
+			colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
+			collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 		}
-
-        colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
-        collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
     }
 
     
