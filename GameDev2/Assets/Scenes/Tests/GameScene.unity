@@ -2010,9 +2010,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
+  b1Cost: 25
   b1Reward: 1
-  b1RewardType: Fuel
+  b1RewardType: Plasma
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 20
+  b1Cost: 25
   b1Reward: 1
   b1RewardType: Plasma
   b2Cost: 10
@@ -3807,9 +3807,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
+  b1Cost: 5
   b1Reward: 1
-  b1RewardType: Fuel
+  b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
@@ -5105,15 +5105,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38039216, g: 0.2, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 11239390191d95a4a95caab8c34766b8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6984,9 +6984,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 5
+  b1Cost: 10
   b1Reward: 1
-  b1RewardType: Metal
+  b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA
@@ -9480,7 +9480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9836,6 +9836,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1997221865}
   - 114: {fileID: 1997221864}
+  - 114: {fileID: 1997221866}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -9896,6 +9897,17 @@ Transform:
   - {fileID: 1341983828}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1997221866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997221863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48135fa1ce467d648b55a3d6ad164c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2019365313
 GameObject:
   m_ObjectHideFlags: 0
@@ -9996,15 +10008,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38039216, g: 0.2, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 11239390191d95a4a95caab8c34766b8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10461,7 +10473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10572,9 +10584,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 20
+  b1Cost: 10
   b1Reward: 1
-  b1RewardType: Plasma
+  b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
   b2RewardType: NA

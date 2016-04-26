@@ -50,6 +50,9 @@ public class WarColliderScript : MonoBehaviour {
     void OnTriggerExit2D(Collider2D coll)
     {
         onPlanet = false;
+		if (pData.leftNeighbor == null || pData.rightNeighbor == null) {
+			Application.LoadLevel (4);
+		}
     }
 
     void OnTriggerStay2D(Collider2D coll) {

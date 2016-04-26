@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour {
         BText.text = "Fuel: "+ resourceFuelDisplayed.ToString();
         CText.text = "Plasma: "+ resourcePlasmaDisplayed.ToString();
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            Application.Quit();
+			Application.LoadLevel (4);
         }
         AIncomeText.text = "+ " + metalIncome;
         BIncomeText.text = "+ " + fuelIncome;

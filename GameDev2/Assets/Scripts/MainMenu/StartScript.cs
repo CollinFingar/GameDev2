@@ -21,6 +21,10 @@ public class StartScript : MonoBehaviour {
     }
 
     public void StartTheShow() {
-        SceneManager.LoadScene(sceneNum);
+		if (sceneNum == -1) {
+			Application.Quit ();
+		} else {
+			SceneManager.LoadScene(sceneNum);
+		}
     }
 }
