@@ -10,6 +10,7 @@ public struct Supply{
 	public int quantity;
 	public int power;
 	public int[] cost;
+	public int reward;
 }
 
 public class FactionScript : MonoBehaviour {
@@ -27,6 +28,7 @@ public class FactionScript : MonoBehaviour {
 	string[] supplyTypes = {"Ammo", "Fuel", "Robots", "Plasma", "Blasters", "Artillery", "Ships"};
 	int[,] supplyCosts = {{10,0,0}, {0,10,0}, {20,10,0}, {0,0,10}, {20,0,10}, {20,10,10}, {25,20,10}};
 	int[] supplyPowers = {100, 300, 900, 1250, 2000, 3000, 4000};
+	int[] supplyRewards = {175, 330, 570, 625, 790, 675, 550};
 	
     // Use this for initialization
 	void Start () {
@@ -36,6 +38,7 @@ public class FactionScript : MonoBehaviour {
 			supplies [i].quantity = 0;
 			supplies [i].power = supplyPowers[i];
 			supplies [i].cost = new int[] {supplyCosts[i,0], supplyCosts[i,1], supplyCosts[i,2]};
+			supplies [i].reward = supplyRewards[i];
 		}
 	}
 	
@@ -63,9 +66,10 @@ public class FactionScript : MonoBehaviour {
 			temp.GetComponent<ContractScript> ().metalCost = supplies[index].cost[0];
 			temp.GetComponent<ContractScript> ().fuelCost = supplies[index].cost[1];
 			temp.GetComponent<ContractScript> ().plasmaCost = supplies[index].cost[2];
+			temp.GetComponent<ContractScript> ().reward = supplies[index].reward;
 			
 			temp.GetComponent<ContractScript> ().max = 5;
-			temp.GetComponent<ContractScript> ().reward = 100;
+			
 
 			contracts [i] = temp;
 		}
