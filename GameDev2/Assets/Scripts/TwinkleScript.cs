@@ -20,7 +20,7 @@ public class TwinkleScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (Time.time);
+		//Debug.Log (Time.time);
 		if (!twinkling && Time.time >= nextTwinkle) {
 			twinkling = true;
 			twinklingDown = true;
