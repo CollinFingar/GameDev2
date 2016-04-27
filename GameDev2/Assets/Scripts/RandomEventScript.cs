@@ -79,35 +79,38 @@ public class RandomEventScript : MonoBehaviour {
 		if (num == 0) {
 			//Call to arms
 			if (Faction == 0) {
-				F1.GetComponent<FactionScript> ().supplies [2].quantity += 1;
+				F1.GetComponent<FactionScript> ().addToPower(2, 1);
 			} else {
-				F2.GetComponent<FactionScript> ().supplies [2].quantity += 1;
+				F2.GetComponent<FactionScript> ().addToPower(2, 1);
 			}
+			
 		} else if (num == 1) {
 			//Backdoor Deals
 			int r = Random.Range(0,3);
 			if (r == 0) {
 				if (Faction == 0) {
-					F1.GetComponent<FactionScript> ().supplies [0].quantity += 2;
+					F1.GetComponent<FactionScript> ().addToPower(0, 2);
 				} else {
-					F2.GetComponent<FactionScript> ().supplies [0].quantity += 2;
+					F2.GetComponent<FactionScript> ().addToPower(0, 2);
 				}
 			} else if (r == 1) {
 				if (Faction == 0) {
-					F1.GetComponent<FactionScript> ().supplies [1].quantity += 2;
+					F1.GetComponent<FactionScript> ().addToPower(1, 2);
 				} else {
-					F2.GetComponent<FactionScript> ().supplies [1].quantity += 2;
+					F2.GetComponent<FactionScript> ().addToPower(1, 2);
 				}
 			} else {
 				if (Faction == 0) {
-					F1.GetComponent<FactionScript> ().supplies [3].quantity += 2;
+					F1.GetComponent<FactionScript> ().addToPower(3, 2);
 				} else {
-					F2.GetComponent<FactionScript> ().supplies [3].quantity += 2;
+					F2.GetComponent<FactionScript> ().addToPower(3, 2);
 				}
 			}
+			
 		} else if (num == 2) {
 			//GM Week
 			ws.StartPeaceWeek();
+			
 		} else if (num == 3) {
 			//Embargo
 			ps.StartEmbargoWeek();

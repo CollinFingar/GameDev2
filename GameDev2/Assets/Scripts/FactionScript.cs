@@ -41,14 +41,17 @@ public class FactionScript : MonoBehaviour {
 			supplies [i].cost = new int[] {supplyCosts[i,0], supplyCosts[i,1], supplyCosts[i,2]};
 			supplies [i].reward = supplyRewards[i];
 		}
+		power = 0;
 	}
 	
 	// Update is called once per frame
-	void Update () {  
+	void Update () { 
+		/*	
 		power = 0;
 		for(int i = 0; i < supplies.Length; i++){
 			power += supplies[i].quantity * supplies[i].power;
 		}
+		*/
 	}
 
 	public void createContracts() {
@@ -81,5 +84,10 @@ public class FactionScript : MonoBehaviour {
 		{
 			contracts [i].GetComponent<ContractScript> ().moveTime = 50;
 		}
+	}
+	
+	public void addToPower(int index, int amount){
+		power += supplies[index].power * amount;
+		supplies[index].quantity += amount;
 	}
 }
