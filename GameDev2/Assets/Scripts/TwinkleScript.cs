@@ -15,7 +15,7 @@ public class TwinkleScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sr = GetComponent<SpriteRenderer> ();
-		nextTwinkle = Time.time + Random.Range (0, 8);
+		nextTwinkle = Time.time + Random.Range (0, 10.4);
 	}
 	
 	// Update is called once per frame
@@ -37,7 +37,7 @@ public class TwinkleScript : MonoBehaviour {
 				if (alph >= .95) {
 					alph = 1;
 					twinkling = false;
-					nextTwinkle = Time.time + Random.Range (2, 10);
+					nextTwinkle = Time.time + Random.Range (4, 14.4);
 				} else {
 					alph += rate;
 				}
