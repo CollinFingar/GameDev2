@@ -2066,8 +2066,8 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 25
-  b1Reward: 1
+  b1Cost: 125
+  b1Reward: 5
   b1RewardType: Plasma
   b2Cost: 10
   b2Reward: 10
@@ -2460,8 +2460,8 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 25
-  b1Reward: 1
+  b1Cost: 50
+  b1Reward: 5
   b1RewardType: Plasma
   b2Cost: 10
   b2Reward: 10
@@ -3942,8 +3942,8 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 5
-  b1Reward: 1
+  b1Cost: 25
+  b1Reward: 5
   b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
@@ -4943,8 +4943,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 582884751}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.45}
+  m_AnchorMax: {x: 0.5, y: 0.45}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 260, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6810,8 +6810,8 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 5
-  b1Reward: 1
+  b1Cost: 25
+  b1Reward: 5
   b1RewardType: Metal
   b2Cost: 10
   b2Reward: 10
@@ -7210,8 +7210,8 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
-  b1Reward: 1
+  b1Cost: 50
+  b1Reward: 5
   b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
@@ -7524,8 +7524,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 582884751}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0.5, y: 0.65}
-  m_AnchorMax: {x: 0.5, y: 0.65}
+  m_AnchorMin: {x: 0.5, y: 0.55}
+  m_AnchorMax: {x: 0.5, y: 0.55}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 260, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10902,8 +10902,8 @@ MonoBehaviour:
   mainCamera: {fileID: 1832652081}
   planetNameTextObject: {fileID: 1473485773}
   planetInfoTextObject: {fileID: 1568182026}
-  b1Cost: 10
-  b1Reward: 1
+  b1Cost: 50
+  b1Reward: 5
   b1RewardType: Fuel
   b2Cost: 10
   b2Reward: 10
