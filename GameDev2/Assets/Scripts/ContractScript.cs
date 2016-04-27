@@ -103,7 +103,8 @@ public class ContractScript : MonoBehaviour {
         for (int i = 0; i < fs.supplies.Length; i++) {
             if (supply == fs.supplies[i].type)
             {
-                fs.supplies[i].quantity += filled;
+                //fs.supplies[i].quantity += filled;
+				fs.addToPower(i, filled);
             }
         }
 
