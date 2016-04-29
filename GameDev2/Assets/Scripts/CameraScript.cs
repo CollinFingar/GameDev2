@@ -45,6 +45,9 @@ public class CameraScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		isMoving = (movingIn || movingOut);
+		if (isMoving) {
+			tScript.paused = true;
+		}
         if (movingIn){
             updateMoveIn();
         } else if (movingOut){
@@ -79,7 +82,6 @@ public class CameraScript : MonoBehaviour {
     }
 
     public void moveOut(){
-        tScript.paused = false;
 		wsc.isZoomed = false;
         //mainCameraScript.orthographicSize = zoomedOutScale;
         mainInterface.SetActive(true);
@@ -96,6 +98,7 @@ public class CameraScript : MonoBehaviour {
         transform.position = Vector3.Lerp(zoomedInPostion, zoomedOutPosition, currentMovingTime / moveTime);
         if (transform.position == zoomedOutPosition)
         {
+			tScript.paused = false;
             mainCameraScript.orthographicSize = zoomedOutScale;
             movingOut = false;
             interfaceCanvas.gameObject.SetActive(true);
