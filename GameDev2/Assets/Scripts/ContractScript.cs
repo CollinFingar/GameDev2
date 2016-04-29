@@ -37,7 +37,7 @@ public class ContractScript : MonoBehaviour {
 	void Start () {
 		tScript = GameObject.Find ("Timer").GetComponent<TimerScript> ();
 		desc = this.gameObject.GetComponentInChildren<Text> ();
-		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n";
+		desc.text = supply + "\n" + filled.ToString () + "/" + max.ToString ();
 
 
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -50,7 +50,7 @@ public class ContractScript : MonoBehaviour {
 			moveContract ();
 		}
 		
-		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n";
+		desc.text = supply + "\n" + filled.ToString () + "/" + max.ToString () + "\n";
 		
 		if(metalCost>0){
 			desc.text += metalCost.ToString()+" Metal\n";
@@ -63,6 +63,7 @@ public class ContractScript : MonoBehaviour {
 		if(plasmaCost>0){
 			desc.text += plasmaCost.ToString()+" Plasma\n";
 		}
+		desc.text += "Reward $" + reward + "\n";
 	}
 
 	void moveContract()
