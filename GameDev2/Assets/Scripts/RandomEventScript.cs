@@ -55,7 +55,7 @@ public class RandomEventScript : MonoBehaviour {
 		events[i] = E1;
 		i++;
 		
-		E1.title = "The Speed of Sound";
+		E1.title = "The Speed of Light";
 		E1.body = "Ships are more powerful this cycle.";
 		events[i] = E1;
 		i++;
