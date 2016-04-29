@@ -16,6 +16,7 @@ public class PlanetScript : MonoBehaviour {
     public Text planetNameTextObject;
     public Text planetInfoTextObject;
 
+	public Text inputNum;
     public int b1Cost = 10;
     public int b1Reward = 10;
     public string b1RewardType = "Metal";
@@ -119,7 +120,7 @@ public class PlanetScript : MonoBehaviour {
             movedIn = true;
             planetNameTextObject.text = planetName;
             planetInfoTextObject.text = planetInfo;
-            b1.GetComponentInChildren<Text>().text = b1Cost.ToString() + " Money -> " + b1Reward.ToString() + " " + b1RewardType;			
+            b1.GetComponentInChildren<Text>().text = "Buy " + b1RewardType + " ($"+b1Cost.ToString()+")";			
             b2.GetComponentInChildren<Text>().text = b2Cost.ToString() + " Money -> " + b2Reward.ToString() + " " + b2RewardType;
             ps.assignPlanet(gameObject);
             publicLeaderImage.sprite = spriteLeader;
@@ -144,12 +145,16 @@ public class PlanetScript : MonoBehaviour {
         }
 
         if (!longTerm) {
-            if (ps.money >= b1Cost) {
-                ps.money -= b1Cost;
-                ps.increaseResource(b1RewardType, b1Reward);
+			int amount = 0;
+			amount = Convert.ToInt32(inputNum.text);
+			
+            if (ps.money >= (b1Cost*amount)) {
+                ps.money -= (b1Cost*amount);
+                ps.increaseResource(b1RewardType, amount);
                 //spawnResource("B");
                 playBuySound();
             }
+			
         } else {
             if (ps.money >= b1Cost && !b1Mine) {
                 playBuildSound();
