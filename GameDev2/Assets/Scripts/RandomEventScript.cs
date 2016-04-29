@@ -40,7 +40,7 @@ public class RandomEventScript : MonoBehaviour {
 		events[i] = E1;
 		i++;
 
-		E1.title = "GM Week!";
+		E1.title = "Holiday Week!";
 		E1.body = "There is peace in recognition of this wonderous week.";
 		events[i] = E1;
 		i++;
