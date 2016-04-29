@@ -3678,6 +3678,7 @@ MonoBehaviour:
   deathCounter: {fileID: 1686960413}
   timer: {fileID: 1997221864}
   isZoomed: 0
+  ps: {fileID: 843346283}
 --- !u!4 &840782919
 Transform:
   m_ObjectHideFlags: 0
@@ -6706,6 +6707,7 @@ MonoBehaviour:
   onPlanet: 0
   pData: {fileID: 0}
   factorA: 0
+  GAMEOVER: 0
 --- !u!50 &1265462059
 Rigidbody2D:
   serializedVersion: 2
@@ -9486,6 +9488,7 @@ MonoBehaviour:
   zoomedOutScale: 5
   zoomedInScale: 1
   isZoomed: 0
+  isMoving: 0
   speed: 3.5
   moveTime: 0.5
   mainCameraScript: {fileID: 1832652081}

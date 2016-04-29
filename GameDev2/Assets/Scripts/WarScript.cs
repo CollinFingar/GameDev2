@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class WarScript : MonoBehaviour {
     public GameObject Faction1;
@@ -86,10 +87,11 @@ public class WarScript : MonoBehaviour {
 	}
 
 	public void EndGame(){
-		StreamWriter sw = new StreamWriter("Assets/Resources/Names.txt");
+		StreamWriter sw = new StreamWriter("Assets/Resources/LatestScore.txt");
 		sw.WriteLine (deaths.ToString());
-		//sw.WriteLine (ps.money.ToString());
-		sw.WriteLine ("Player Money");
+		sw.WriteLine (ps.money.ToString());
+		sw.Close ();
+		SceneManager.LoadScene (4);
 	}
 
     
