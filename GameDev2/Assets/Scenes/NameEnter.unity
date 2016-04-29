@@ -361,12 +361,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 899417314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660e242b3889fdf40a0b2b43d1db2976, type: 3}
+  m_Script: {fileID: 11500000, guid: a07e550c797891c47ac367bcdd577509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 4900000, guid: 5627697af61e9bc48add1449409ac969, type: 3}
+  text: {fileID: 4900000, guid: f1580959f3e024847bad6f25b0bcf105, type: 3}
   if1: {fileID: 1027739344}
-  if2: {fileID: 0}
   sceneNum: 5
 --- !u!4 &899417316
 Transform:

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.IO;
 
 public class WarScript : MonoBehaviour {
     public GameObject Faction1;
@@ -27,6 +28,8 @@ public class WarScript : MonoBehaviour {
 
 	private int peaceWeekEnd = 0;
 	private bool peaceWeek = false;
+
+	public PlayerScript ps;
 
 	// Use this for initialization
 	void Start () {
@@ -71,12 +74,22 @@ public class WarScript : MonoBehaviour {
 		if (peaceWeek && timer.cycleNum >= peaceWeekEnd) {
 			peaceWeek = false;
 		}
+		if (wcs.GAMEOVER == true) {
+			EndGame ();
+		}
     }
 
 
 	public void StartPeaceWeek(){
 		peaceWeek = true;
 		peaceWeekEnd = timer.cycleNum + 1;
+	}
+
+	public void EndGame(){
+		StreamWriter sw = new StreamWriter("Assets/Resources/Names.txt");
+		sw.WriteLine (deaths.ToString());
+		//sw.WriteLine (ps.money.ToString());
+		sw.WriteLine ("Player Money");
 	}
 
     

@@ -11,7 +11,9 @@ public class WarColliderScript : MonoBehaviour {
 	public PlanetScript pData;
 	Vector3 pos1;
 	Vector3 pos2;
-	public float factorA; 
+	public float factorA;
+
+	public bool GAMEOVER = false;
 
 	// Use this for initialization
 	void Start () {
@@ -56,7 +58,8 @@ public class WarColliderScript : MonoBehaviour {
     {
         onPlanet = false;
 		if (pData.leftNeighbor == null || pData.rightNeighbor == null) {
-			Application.LoadLevel (4);
+			GAMEOVER = true;
+			//Application.LoadLevel (4);
 		}
     }
 
