@@ -22,3 +22,7 @@ GameDev2/[Oo]bj/
 sysinfo.txt
 GameDev2/Library/
 GameDev2/Temp/
+GameDev2/Assets/Resources/Names.txt
+GameDev2/Assets/Resources/Scores.txt
+GameDev2/Assets/Resources/LatestScore.txt
+
