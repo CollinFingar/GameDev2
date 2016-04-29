@@ -147,15 +147,18 @@ public class PlanetScript : MonoBehaviour {
         }
 
         if (!longTerm) {
-			int amount = 0;
-			amount = Convert.ToInt32(inputNum.text);
 			
-            if (ps.money >= (b1Cost*amount)) {
-                ps.money -= (b1Cost*amount);
-                ps.increaseResource(b1RewardType, amount);
-                //spawnResource("B");
-                playBuySound();
-            }
+			if(inputNum.text.Length > 0){
+				int amount = 0;
+				amount = Convert.ToInt32(inputNum.text);
+				
+				if (ps.money >= (b1Cost*amount)) {
+					ps.money -= (b1Cost*amount);
+					ps.increaseResource(b1RewardType, amount);
+					//spawnResource("B");
+					playBuySound();
+				}
+			}
 			
         } else {
             if (ps.money >= b1Cost && !b1Mine) {
