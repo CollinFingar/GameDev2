@@ -20,7 +20,7 @@ public class RandomEventScript : MonoBehaviour {
 	public Text F2name;
 	public int Faction;
 	
-	public Event[] events = new Event[4];
+	public Event[] events = new Event[6];
 	public Event E1;
 
 	public WarScript ws;
@@ -47,6 +47,16 @@ public class RandomEventScript : MonoBehaviour {
 
 		E1.title = "Embargo!";
 		E1.body = "All planets in the system have placed an embargo on weapon, warship, and toilet paper manufacturers.";
+		events[i] = E1;
+		i++;
+		
+		E1.title = "Hot Lead";
+		E1.body = "Guns are more powerful this cycle.";
+		events[i] = E1;
+		i++;
+		
+		E1.title = "The Speed of Sound";
+		E1.body = "Ships are more powerful this cycle.";
 		events[i] = E1;
 		i++;
 	}
@@ -114,6 +124,18 @@ public class RandomEventScript : MonoBehaviour {
 		} else if (num == 3) {
 			//Embargo
 			ps.StartEmbargoWeek();
+		
+		} else if (num == 4) {
+			//Hot Lead
+			F1.GetComponent<FactionScript> ().supplies[4].power += 500;
+			F2.GetComponent<FactionScript> ().supplies[4].power += 500;
+			ws.StartHotLead();
+		
+		} else if(num == 5) {
+			//The Speed of Sound
+			F1.GetComponent<FactionScript> ().supplies[6].power += 1500;
+			F2.GetComponent<FactionScript> ().supplies[6].power += 1500;
+			ws.StartSpeed();
 		}
 		
 	}

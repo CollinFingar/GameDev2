@@ -107,7 +107,9 @@ public class PlanetScript : MonoBehaviour {
 			return;
 		}
         if (!movedIn) {
-			
+			if (cs.tScript.paused) { //don't zoom in if game is paused
+				return;
+			}
 			if(b2RewardType == "NA"){
 				b2.gameObject.SetActive(false);
 			}
@@ -124,7 +126,7 @@ public class PlanetScript : MonoBehaviour {
             b2.GetComponentInChildren<Text>().text = b2Cost.ToString() + " Money -> " + b2Reward.ToString() + " " + b2RewardType;
             ps.assignPlanet(gameObject);
             publicLeaderImage.sprite = spriteLeader;
-        } else {
+		} else{
 			
 			b1.gameObject.SetActive(true);
 			b2.gameObject.SetActive(true);

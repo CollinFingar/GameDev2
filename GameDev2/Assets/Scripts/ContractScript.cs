@@ -31,9 +31,11 @@ public class ContractScript : MonoBehaviour {
 
     public GameObject faction;
 
+	TimerScript tScript;
+
 	// Use this for initialization
 	void Start () {
-		
+		tScript = GameObject.Find ("Timer").GetComponent<TimerScript> ();
 		desc = this.gameObject.GetComponentInChildren<Text> ();
 		desc.text = supply+"\n"+filled.ToString()+"/"+max.ToString()+"\n";
 
@@ -146,7 +148,7 @@ public class ContractScript : MonoBehaviour {
 
     void OnMouseUp()
     {
-		if (complete == false) {
+		if ( complete == false && !tScript.paused) {
 
 			if (player.GetComponent<PlayerScript> ().resourceFuel >= fuelCost && player.GetComponent<PlayerScript> ().resourceMetal >= metalCost && player.GetComponent<PlayerScript> ().resourcePlasma >= plasmaCost) {
 
