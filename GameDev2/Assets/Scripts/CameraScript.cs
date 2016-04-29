@@ -11,6 +11,7 @@ public class CameraScript : MonoBehaviour {
     private bool movingIn = false;
     private bool movingOut = false;
 	public bool isZoomed = false;
+	public bool isMoving = false; //combination of movingIn and movingOut for use in other scripts
     public float speed = .1f;
 
     private float startTime = 0f;
@@ -43,6 +44,7 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		isMoving = (movingIn || movingOut);
         if (movingIn){
             updateMoveIn();
         } else if (movingOut){
