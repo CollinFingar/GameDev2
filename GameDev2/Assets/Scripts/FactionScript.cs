@@ -25,7 +25,7 @@ public class FactionScript : MonoBehaviour {
 	public GameObject contract;
 	public GameObject timer;
 	
-	public Supply[] supplies = new Supply[6];
+	public Supply[] supplies = new Supply[7];
 	string[] supplyTypes = {"Ammo", "Fuel", "Robots", "Plasma", "Blasters", "Artillery", "Ships"};
 	int[,] supplyCosts = {{10,0,0}, {0,10,0}, {20,10,0}, {0,0,10}, {20,0,10}, {20,10,10}, {25,20,10}};
 	int[] supplyPowers = {100, 300, 900, 1250, 2000, 3000, 4000};
