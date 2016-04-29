@@ -93,9 +93,19 @@ public class PlanetScript : MonoBehaviour {
 		if (selected) {
 			popText.text = "Pop: " + displayedPopulation.ToString ();
 		}
+		if (movedIn && !cs.isMoving && Input.GetKeyUp (KeyCode.Escape)) {
+			b1.gameObject.SetActive(true);
+			b2.gameObject.SetActive(true);
+
+			cs.moveOut();
+			movedIn = false;
+		}
 	}
 
     void OnMouseDown() {
+		if (cs.isMoving) {
+			return;
+		}
         if (!movedIn) {
 			
 			if(b2RewardType == "NA"){
