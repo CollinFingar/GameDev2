@@ -29,6 +29,12 @@ public class WarScript : MonoBehaviour {
 
 	private int peaceWeekEnd = 0;
 	private bool peaceWeek = false;
+	
+	private int hotLeadEnd = 0;
+	private bool hotLead = false;
+	
+	private bool speedSound = false;
+	private int speedSoundEnd = 0;
 
 	public PlayerScript ps;
 
@@ -72,9 +78,23 @@ public class WarScript : MonoBehaviour {
 			colors.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 			collider.transform.position = new Vector3(farRightX * warStatus + farLeftX * (1 - warStatus), transform.position.y, transform.position.z);
 		}
+		
 		if (peaceWeek && timer.cycleNum >= peaceWeekEnd) {
 			peaceWeek = false;
 		}
+		
+		if (hotLead && timer.cycleNum >= hotLeadEnd) {
+			Faction1.GetComponent<FactionScript> ().supplies[4].power -= 500;
+			Faction2.GetComponent<FactionScript> ().supplies[4].power -= 500;
+			hotLead = false;
+		}
+		
+		if (speedSound && timer.cycleNum >= speedSoundEnd) {
+			Faction1.GetComponent<FactionScript> ().supplies[6].power -= 1500;
+			Faction2.GetComponent<FactionScript> ().supplies[6].power -= 1500;
+			speedSound = false;
+		}
+		
 		if (wcs.GAMEOVER == true) {
 			EndGame ();
 		}
@@ -84,6 +104,16 @@ public class WarScript : MonoBehaviour {
 	public void StartPeaceWeek(){
 		peaceWeek = true;
 		peaceWeekEnd = timer.cycleNum + 1;
+	}
+	
+	public void StartHotLead(){
+		hotLead = true;
+		hotLeadEnd = timer.cycleNum + 1;
+	}
+	
+	public void StartSpeed(){
+		speedSound = true;
+		speedSoundEnd = timer.cycleNum + 1;
 	}
 
 	public void EndGame(){

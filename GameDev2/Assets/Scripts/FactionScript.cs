@@ -46,12 +46,7 @@ public class FactionScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () { 
-		/*	
-		power = 0;
-		for(int i = 0; i < supplies.Length; i++){
-			power += supplies[i].quantity * supplies[i].power;
-		}
-		*/
+	
 	}
 
 	public void createContracts() {

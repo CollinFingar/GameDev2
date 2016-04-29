@@ -110,7 +110,7 @@ public class TimerScript : MonoBehaviour {
 
 	void DoRandomEvent(){
 		//compute whether or not to do random event and what type
-		int r = Random.Range(0,7);
+		int r = Random.Range(0,15);
 		//int r = 6;
 
 		if (r < 3) {
@@ -125,6 +125,12 @@ public class TimerScript : MonoBehaviour {
 		} else if (r < 7) {
 			latestEventNum = 3;
 			rs.initEvent(3);
+		} else if (r < 11){
+			latestEventNum = 4;
+			rs.initEvent(4);
+		} else if (r < 15){
+			latestEventNum = 5;
+			rs.initEvent(5);
 		}
 
 		paused = true;
