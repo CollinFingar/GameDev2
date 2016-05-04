@@ -7248,7 +7248,7 @@ MonoBehaviour:
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
-  spriteLeader: {fileID: 21300004, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
+  spriteLeader: {fileID: 21300010, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   player: {fileID: 843346282}
   movedIn: 0
   blueParticle: {fileID: 101756, guid: 2b8f693606d207d4f9e728e4dc2b9969, type: 2}
@@ -9397,7 +9397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1834697748
 MonoBehaviour:
   m_ObjectHideFlags: 0
