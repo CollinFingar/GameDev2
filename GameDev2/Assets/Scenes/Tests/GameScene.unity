@@ -2390,8 +2390,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -2785,8 +2785,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -4194,8 +4194,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -6850,8 +6850,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -7251,8 +7251,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -10914,8 +10914,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
