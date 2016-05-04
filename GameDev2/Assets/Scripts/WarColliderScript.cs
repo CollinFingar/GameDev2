@@ -57,7 +57,8 @@ public class WarColliderScript : MonoBehaviour {
     void OnTriggerExit2D(Collider2D coll)
     {
         onPlanet = false;
-		if (pData.leftNeighbor == null || pData.rightNeighbor == null) {
+		if ((pData.leftNeighbor == null && transform.position.x < currentPlanet.transform.position.x)
+			|| (pData.rightNeighbor == null && transform.position.x > currentPlanet.transform.position.x)) {
 			GAMEOVER = true;
 			//Application.LoadLevel (4);
 		}
