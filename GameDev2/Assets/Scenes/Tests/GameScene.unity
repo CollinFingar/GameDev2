@@ -2390,8 +2390,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -2785,8 +2785,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -3714,6 +3714,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19837558, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60a4738562d494f4d9047c547fe2c5bb, type: 2}
   m_IsPrefabParent: 0
@@ -4194,8 +4198,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -6850,8 +6854,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -7244,15 +7248,15 @@ MonoBehaviour:
   b1: {fileID: 2019365315}
   b2: {fileID: 1095986211}
   publicLeaderImage: {fileID: 1001719704}
-  spriteLeader: {fileID: 21300004, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
+  spriteLeader: {fileID: 21300010, guid: 1acc099f5bf2b084a9aa950b0ccc9fb5, type: 3}
   player: {fileID: 843346282}
   movedIn: 0
   blueParticle: {fileID: 101756, guid: 2b8f693606d207d4f9e728e4dc2b9969, type: 2}
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -10914,8 +10918,8 @@ MonoBehaviour:
   greenParticle: {fileID: 118598, guid: 9c4514e3891aeab419808f492ce6b994, type: 2}
   redParticle: {fileID: 148050, guid: e01eb76a854f090498939138bdfd93be, type: 2}
   mineNumberIterations: 5
-  mineNumberResourceIncrease: 1.5
-  mineNumberMoneyIncrease: 1.5
+  mineNumberResourceIncrease: 3
+  mineNumberMoneyIncrease: 1
   buy: {fileID: 8300000, guid: cee165d6b8655b04f99d1754c7fd4d10, type: 3}
   build: {fileID: 8300000, guid: 6f26c89fb2a81f240982a1810829f091, type: 3}
   onlyOneMine: 1
@@ -11078,6 +11082,14 @@ Prefab:
     - target: {fileID: 19804938, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
       propertyPath: prewarm
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19804938, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 19804938, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
+      propertyPath: EmissionModule.rate.scalar
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 101df775c5926b8409a2fee2ec67d43f, type: 2}
