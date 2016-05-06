@@ -99,21 +99,21 @@ public class RandomEventScript : MonoBehaviour {
 			int r = Random.Range(0,3);
 			if (r == 0) {
 				if (Faction == 0) {
-					F1.GetComponent<FactionScript> ().addToPower(0, 2);
+					F1.GetComponent<FactionScript> ().addToPower(0, Random.Range(1,4));
 				} else {
-					F2.GetComponent<FactionScript> ().addToPower(0, 2);
+					F2.GetComponent<FactionScript> ().addToPower(0, Random.Range(1,4));
 				}
 			} else if (r == 1) {
 				if (Faction == 0) {
-					F1.GetComponent<FactionScript> ().addToPower(1, 2);
+					F1.GetComponent<FactionScript> ().addToPower(1, Random.Range(1,4));
 				} else {
-					F2.GetComponent<FactionScript> ().addToPower(1, 2);
+					F2.GetComponent<FactionScript> ().addToPower(1, Random.Range(1,4));
 				}
 			} else {
 				if (Faction == 0) {
-					F1.GetComponent<FactionScript> ().addToPower(3, 2);
+					F1.GetComponent<FactionScript> ().addToPower(3, Random.Range(1,4));
 				} else {
-					F2.GetComponent<FactionScript> ().addToPower(3, 2);
+					F2.GetComponent<FactionScript> ().addToPower(3, Random.Range(1,4));
 				}
 			}
 			
