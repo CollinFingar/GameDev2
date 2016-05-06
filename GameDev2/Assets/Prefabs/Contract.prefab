@@ -63,8 +63,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.036, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.8, z: 1}
+  m_LocalPosition: {x: 2.036, y: -0.02, z: -1}
+  m_LocalScale: {x: 0.05, y: 0.8, z: -1}
   m_Children: []
   m_Father: {fileID: 22435296}
   m_RootOrder: 1
@@ -171,17 +171,17 @@ MonoBehaviour:
   Faction: 0
   moveTime: 50
   moveType: 0
-  power: 0
+  powerIndex: 0
   player: {fileID: 110508, guid: 51559b1f78ec87642ab385816156c033, type: 2}
   giveMoney: 1
   faction: {fileID: 0}
-  powerNumArray: 00000000000000000100000001000000020000000200000003000000
-  powerSprites:
+  lightBar: {fileID: 186894}
+  lightBarSprites:
   - {fileID: 21300000, guid: dae4e061fa3176445932ed6656bcd138, type: 3}
-  - {fileID: 21300000, guid: 5c618cdb1e2187e4999959fd4f4b7723, type: 3}
+  - {fileID: 21300000, guid: 2d7e715af63f43e4c9dbb63a14435e46, type: 3}
   - {fileID: 21300000, guid: aa935e15f88662141b003c5ab35e1fcf, type: 3}
   - {fileID: 21300000, guid: fcf60c1f52e49784cb9a32653dc85ec7, type: 3}
-  powerSprite: {fileID: 186894}
+  contractStrengths: 00000000000000000100000001000000020000000200000003000000
 --- !u!114 &11476590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,7 +321,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.3772388, y: 2.38169}
+  m_AnchoredPosition: {x: -7.64, y: 1.31}
   m_SizeDelta: {x: 5.12, y: 5.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
