@@ -47,7 +47,7 @@ public class WarScript : MonoBehaviour {
 	void Update () {
 		if (!timer.randomEventOnScreen && !isZoomed && !peaceWeek) {
 			if (wcs.onPlanet && wcs.pData.population > 5000) {
-				long r = Random.Range (3000, 5000);
+				long r = Random.Range (1500, 3000);
 
 				deaths += r;
 				wcs.pData.population -= r;
@@ -118,6 +118,7 @@ public class WarScript : MonoBehaviour {
 
 	public void EndGame(){
 		StreamWriter sw = new StreamWriter("Assets/Resources/LatestScore.txt");
+        //int moneyPerCycle = (int)(ps.totalMoney / timer.cycleNum);
 		sw.WriteLine (deaths.ToString());
 		sw.WriteLine (ps.money.ToString());
 		sw.Close ();

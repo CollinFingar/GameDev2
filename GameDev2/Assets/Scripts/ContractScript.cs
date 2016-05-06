@@ -87,7 +87,8 @@ public class ContractScript : MonoBehaviour {
 			if(giveMoney){
 				if(filled > 0){
 					player.GetComponent<PlayerScript> ().money += reward * filled;
-	                GiveFactionResources();
+                    player.GetComponent<PlayerScript>().totalMoney += reward * filled;
+                    GiveFactionResources();
 				}
 				giveMoney = false;
 			}

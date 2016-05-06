@@ -2404,8 +2404,8 @@ MonoBehaviour:
   spr_pM: {fileID: 1508081492}
   spr_fM: {fileID: 1179498693}
   popText: {fileID: 172084941}
-  population: 500000000
-  popDisplayTick: 1000
+  population: 5000000
+  popDisplayTick: 10000
   selected: 0
 --- !u!61 &464856308
 BoxCollider2D:
@@ -2799,8 +2799,8 @@ MonoBehaviour:
   spr_pM: {fileID: 244131113}
   spr_fM: {fileID: 57552141}
   popText: {fileID: 172084941}
-  population: 400000000
-  popDisplayTick: 1000
+  population: 4000000
+  popDisplayTick: 10000
   selected: 0
 --- !u!61 &493339808
 BoxCollider2D:
@@ -4212,8 +4212,8 @@ MonoBehaviour:
   spr_pM: {fileID: 721744659}
   spr_fM: {fileID: 1510008751}
   popText: {fileID: 172084941}
-  population: 100000000
-  popDisplayTick: 1000
+  population: 1000000
+  popDisplayTick: 10000
   selected: 0
 --- !u!212 &885047570
 SpriteRenderer:
@@ -6868,8 +6868,8 @@ MonoBehaviour:
   spr_pM: {fileID: 184249664}
   spr_fM: {fileID: 167796560}
   popText: {fileID: 172084941}
-  population: 800000000
-  popDisplayTick: 1000
+  population: 8000000
+  popDisplayTick: 10000
   selected: 0
 --- !u!61 &1314148457
 BoxCollider2D:
@@ -7269,8 +7269,8 @@ MonoBehaviour:
   spr_pM: {fileID: 1529174550}
   spr_fM: {fileID: 1209753707}
   popText: {fileID: 172084941}
-  population: 1000000000
-  popDisplayTick: 1000
+  population: 10000000
+  popDisplayTick: 10000
   selected: 0
 --- !u!212 &1410560526
 SpriteRenderer:
@@ -10932,8 +10932,8 @@ MonoBehaviour:
   spr_pM: {fileID: 1139985282}
   spr_fM: {fileID: 615586488}
   popText: {fileID: 172084941}
-  population: 1000000000
-  popDisplayTick: 1000
+  population: 10000000
+  popDisplayTick: 10000
   selected: 0
 --- !u!61 &2128300339
 BoxCollider2D:
