@@ -23,6 +23,7 @@ public class ContractScript : MonoBehaviour {
 	public int Faction = 0;
 	public float moveTime = 0;
 	public int moveType = 0; //type of movement (0 = creation, 1 = expire)
+	public int powerIndex = 0; //determines lightBar color (set in FactionScript on creation)
 	Text desc;
 	//######################################################################//
 
@@ -30,6 +31,9 @@ public class ContractScript : MonoBehaviour {
 	public bool giveMoney = true;
 
     public GameObject faction;
+	public GameObject lightBar; //Difficulty bar on the side of contracts
+	public Sprite[] lightBarSprites;
+	public int[] contractStrengths;
 
 	TimerScript tScript;
 
@@ -38,6 +42,7 @@ public class ContractScript : MonoBehaviour {
 		tScript = GameObject.Find ("Timer").GetComponent<TimerScript> ();
 		desc = this.gameObject.GetComponentInChildren<Text> ();
 		desc.text = supply + "\n" + filled.ToString () + "/" + max.ToString ();
+		lightBar.GetComponent<SpriteRenderer> ().sprite = lightBarSprites[contractStrengths [powerIndex]];
 
 
 		player = GameObject.FindGameObjectWithTag ("Player");
