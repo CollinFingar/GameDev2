@@ -51,7 +51,7 @@ public class WarScript : MonoBehaviour {
 
 				deaths += r;
 				wcs.pData.population -= r;
-				Debug.Log (wcs.pData.planetName);
+				//Debug.Log (wcs.pData.planetName);
 			} else if (wcs.onPlanet && wcs.pData.population <= 5000) {
 				long r = wcs.pData.population;
 				deaths += r;
@@ -63,8 +63,8 @@ public class WarScript : MonoBehaviour {
 			F1power = (float)Faction1.GetComponent<FactionScript> ().power;
 			F2power = (float)Faction2.GetComponent<FactionScript> ().power;
 
-			Debug.Log(F1power);
-			Debug.Log(F2power);
+			//Debug.Log(F1power);
+			//Debug.Log(F2power);
 
 			//NEW WAR ALGORITHM HERE//
 

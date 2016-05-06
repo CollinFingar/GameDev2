@@ -68,6 +68,6 @@ public class WarColliderScript : MonoBehaviour {
         currentPlanet = coll.gameObject;
 		pData = currentPlanet.GetComponent<PlanetScript> ();
         currentPlanetName = coll.gameObject.GetComponent<PlanetScript>().planetName;
-        Debug.Log(currentPlanetName);
+        //Debug.Log(currentPlanetName);
     }
 }
