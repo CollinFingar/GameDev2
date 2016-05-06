@@ -5,6 +5,8 @@ using System.IO;
 
 public class PlayerScript : MonoBehaviour {
 
+    public float totalMoney = 0;
+
     public float money = 0;
     public float resourceMetal = 0;
     public float resourceFuel = 0;
