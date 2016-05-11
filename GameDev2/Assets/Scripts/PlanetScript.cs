@@ -146,7 +146,7 @@ public class PlanetScript : MonoBehaviour {
             longTerm = false;
         }
 
-        if (!longTerm) {
+		if (!longTerm && population > 0) {
 			
 			if(inputNum.text.Length > 0){
 				int amount = 0;
@@ -189,7 +189,7 @@ public class PlanetScript : MonoBehaviour {
             longTerm = false;
         }
 
-        if (!longTerm)
+		if (!longTerm && population > 0)
         {
             if (ps.money >= b2Cost)
             {
