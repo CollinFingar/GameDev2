@@ -4224,7 +4224,7 @@ MonoBehaviour:
   spr_pM: {fileID: 721744659}
   spr_fM: {fileID: 1510008751}
   popText: {fileID: 172084941}
-  population: 1000000
+  population: 10000000
   popDisplayTick: 10000
   selected: 0
 --- !u!212 &885047570
