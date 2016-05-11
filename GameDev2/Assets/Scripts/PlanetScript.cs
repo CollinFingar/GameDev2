@@ -278,8 +278,8 @@ public class PlanetScript : MonoBehaviour {
 			planetInfo = "\"Choo choo! All aboard for our planet full of trains, trains, trains! Keep your ears open and you might even hear one speak!\n\nThomas pulls into station with plasma each day, so feel free to trade with us, dear friend!\"\n\n-Sir Topham Hutt";
 		} else if(planetName == "Full Metal Planet") {
 			planetInfo = "\"Hello, Sir, and welcome to our platoon! We fight the enemy at the gates just as we were soldiers achieving glory every war before.\n\nBe the patriot we need and purchase our metal. Don’t let our planet be the lone survivor!\"\n\n-General Ryan";
-		} else if(planetName == "Enterpronia") {
-			planetInfo = "\"Greetings, I am so glad you beamed down here. Our phasers are never set to stun in this hostile area.\n\nI spoke with Spook, and we have a surplus of metal and plasma, if trading was on your mind.\"\n\n-Captain Dirk";
+		} else if(planetName == "Spectreland") {
+			planetInfo = "\"I hope you have a good reason for disturbing me, my time is very precious.\n\nIf you've come to trade then I have some good news for you. We are number one in fuel trading, if you have the cash then my supplies are for your eyes only.\n\n - 1st Commander";
 		}
     }
 

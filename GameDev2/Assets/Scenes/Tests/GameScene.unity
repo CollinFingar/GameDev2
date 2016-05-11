@@ -1574,7 +1574,7 @@ RectTransform:
   - {fileID: 99352919}
   - {fileID: 792104367}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3190,7 +3190,7 @@ RectTransform:
   - {fileID: 1454806008}
   - {fileID: 1068643678}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -5061,7 +5061,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.75, y: 0.75}
   m_AnchorMax: {x: 0.75, y: 0.75}
-  m_AnchoredPosition: {x: -274, y: -282.95}
+  m_AnchoredPosition: {x: -274, y: -283}
   m_SizeDelta: {x: 100, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1001719704
@@ -5157,7 +5157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1068643677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6844,7 +6844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: ArrPeeAye
-  planetInfo: '"Welcome to our planet of scholars. For those worthy of paying the
+  planetInfo: '"\n\n-The Honorablenet of scholars. For those worthy of paying the
     glorious tax, opportunities are abundant to serve the Empire.  We are open to
     trading metal that is left-over from building top-of-the-line tech, as well as
     element zero."\n\n-The Honorable'
@@ -7246,7 +7246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5720b5c674e99e642ad471905364b16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Ved Emag
+  planetName: Spectreland
   planetInfo: This will eventually show a detailed description about this planet including
     it's leader, resources, and current faction affiliation.
   button1String: Do this Action
@@ -8420,7 +8420,7 @@ Transform:
   - {fileID: 2034929635}
   - {fileID: 1262877638}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &1586924629
 GameObject:
   m_ObjectHideFlags: 0
@@ -8802,7 +8802,7 @@ Transform:
   - {fileID: 944642474}
   - {fileID: 1130411543}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1749183479
 GameObject:
   m_ObjectHideFlags: 0
@@ -9130,8 +9130,9 @@ Transform:
   - {fileID: 493339806}
   - {fileID: 885047567}
   - {fileID: 1410560523}
+  - {fileID: 1997221865}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1832652077
 GameObject:
   m_ObjectHideFlags: 0
@@ -9496,7 +9497,7 @@ RectTransform:
   - {fileID: 898696074}
   - {fileID: 1920459039}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -9595,7 +9596,7 @@ RectTransform:
   - {fileID: 172084940}
   - {fileID: 2089399291}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -10070,8 +10071,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1341983828}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1824590211}
+  m_RootOrder: 6
 --- !u!114 &1997221866
 MonoBehaviour:
   m_ObjectHideFlags: 0
